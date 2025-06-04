@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" href="IMAGES/LOGO.ico" type="image/ico">
+    <title>RALPH Portfolio | Graphic Artist & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px currentColor;
+        }
+        
+        .neon-border {
+            border: 2px solid;
+            box-shadow: 0 0 10px currentColor;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+        }
+        
+        .typewriter {
+            border-right: 3px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40) infinite alternate,
+                       blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            0% { width: 0 }
+            50% { width: 100% }
+            100% { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00ffff }
+        }
+        
+        .bg-gradient-radial {
+            background: radial-gradient(circle at center, rgba(102, 51, 153, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-cyan-400 glow-text">RALPH PORTFOLIO</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-cyan-400 transition duration-300">Home</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-purple-400 transition duration-300">About</a>
+                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-green-400 transition duration-300">Skills</a>
+                        <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-pink-400 transition duration-300">Projects</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-yellow-400 transition duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Home</a>
+                    <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">About</a>
+                    <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Skills</a>
+                    <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Projects</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-radial"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Ralph</span>
+                </h1>
+                <div class="text-xl md:text-2xl mb-6 typewriter text-cyan-400">Graphic Artist & Website Designer</div>
+                <p class="text-gray-300 mb-8 text-lg">
+                   Crafting simple, creative designs that speak volumes.&nbsp; &nbsp; &nbsp; &nbsp; 
+                       &nbsp;Let's turn your ideas into clean, impactful visuals.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-medium text-white hover:from-cyan-600 hover:to-blue-700 transition duration-300 flex items-center">
+                        View My Work <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border-2 border-purple-500 text-purple-400 rounded-full font-medium hover:bg-purple-900 hover:bg-opacity-30 transition duration-300 flex items-center">
+                        Contact Me <i class="fas fa-paper-plane ml-2"></i>
+                    </a>
+                </div>
+                <div class="mt-12 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition duration-300 text-2xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300 text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-400 transition duration-300 text-2xl">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300 text-2xl">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 p-1 floating">
+                    <div class="w-full h-full rounded-full bg-black overflow-hidden flex items-center justify-center">
+                        <img src="IMAGES/BLACK.jpg" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="absolute -bottom-10 left-10 w-20 h-20 rounded-full bg-gradient-to-tr from-pink-500 to-yellow-500 p-1 animate-pulse">
+                    <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                        <i class="fas fa-code text-xl text-pink-400"></i>
+                    </div>
+                </div>
+                <div class="absolute top-10 right-10 w-16 h-16 rounded-full bg-gradient-to-tr from-green-400 to-cyan-500 p-1 animate-pulse delay-300">
+                    <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                        <i class="fas fa-paint-brush text-lg text-green-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-gray-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">About Me</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-72 md:h-72 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 p-1">
+                            <div class="w-full h-full rounded-2xl bg-black overflow-hidden flex items-center justify-center">
+                                <img src="IMAGES/About.jpg" alt="About Me" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 rounded-full text-sm font-medium">
+                            <i class="fas fa-smile mr-2"></i> Creative & Passionate
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-16">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6">
+                        Who am I?
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                       I'm a hybrid creative professional with 4+ years of experience in both graphic design and web development. I specialize in logo design, game posters, game launchers, jersey sublimation, polo shirt design, and print sublimation, creating visually compelling assets that resonate across digital and physical platforms.
+                    </p>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        With a strong foundation in illustration, branding, and digital art, I blend traditional techniques with modern tools to deliver impactful and original designs. When I'm not designing, you'll find me sketching, exploring new art styles, or working on personal creative projects.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <h4 class="font-medium text-cyan-400 mb-2">Name</h4>
+                            <p class="text-gray-300">Ralph Joaquin S. Villarin</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-purple-400 mb-2">Email</h4>
+                            <p class="text-gray-300">krdesigns023@gmail.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-pink-400 mb-2">Experience</h4>
+                            <p class="text-gray-300">4+ Years</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-green-400 mb-2">Location</h4>
+                            <p class="text-gray-300">San Roque, Talisay City, Cebu</p>
+                        </div>
+                    </div>
+                    <a href="RESUME.pdf" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-medium hover:from-purple-600 hover:to-pink-600 transition duration-300">
+                        Download Resume <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500 rounded-full opacity-10 filter blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500 rounded-full opacity-10 filter blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-500">My Skills</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-cyan-500 to-green-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill 1 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-blue-400 transition duration-300">
+                    <div class="text-4xl text-blue-400 mb-3">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                    <p class="text-gray-400 mb-4">Expert</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-green-400 transition duration-300">
+                    <div class="text-4xl text-green-400 mb-3">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Illustration</h3>
+                    <p class="text-gray-400 mb-4">Advanced</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-red-400 transition duration-300">
+                    <div class="text-4xl text-red-400 mb-3">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Typography</h3>
+                    <p class="text-gray-400 mb-4">Advanced</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-red-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-purple-400 transition duration-300">
+                    <div class="text-4xl text-purple-400 mb-3">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Color Theory</h3>
+                    <p class="text-gray-400 mb-4">Expert</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-yellow-400 transition duration-300">
+                    <div class="text-4xl text-yellow-400 mb-3">
+                        <i class="fas fa-vector-square"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Vector Art</h3>
+                    <p class="text-gray-400 mb-4">Advanced</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-pink-400 transition duration-300">
+                    <div class="text-4xl text-pink-400 mb-3">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Photo Editing</h3>
+                    <p class="text-gray-400 mb-4">Advanced</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-pink-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                <!-- Skill 7 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-400 transition duration-300">
+                    <div class="text-4xl text-cyan-400 mb-3">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Digital Painting</h3>
+                    <p class="text-gray-400 mb-4">Expert</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-cyan-500 h-2 rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                <!-- Skill 8 -->
+                <div class="skill-card bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-orange-400 transition duration-300">
+                    <div class="text-4xl text-orange-400 mb-3">
+                        <i class="fas fa-icons"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Icon Design</h3>
+                    <p class="text-gray-400 mb-4">Advanced</p>
+                    <div class="w-full bg-gray-800 rounded-full h-2">
+                        <div class="bg-orange-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-b from-black to-gray-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-500">My Projects</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-pink-500 to-orange-500 mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Here are some of my recent projects. Each one was carefully crafted to solve specific problems and deliver exceptional user experiences.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition duration-500">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="IMAGES/CLIENT/LOGO.jpg" alt="Brand Identity Project" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">Branding & Logo Designs</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-blue-900 bg-opacity-40 text-blue-300 rounded text-xs">Adobe Photoshop</span>
+                                <span class="px-2 py-1 bg-cyan-900 bg-opacity-40 text-cyan-300 rounded text-xs">Adobe Illustrator</span>
+                                <span class="px-2 py-1 bg-yellow-900 bg-opacity-40 text-yellow-300 rounded text-xs">Corel Draw</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Complete rebranding and logo design for a fashion e-commerce brand, resulting in a cohesive visual identity and a 80% increase in customer engagement and brand recognition.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/photo/?fbid=122120550626698567&set=a.122119798052698567" class="flex-1 py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded text-center text-sm font-medium transition duration-300">
+                                Output
+                            </a>
+                            <a href="https://www.facebook.com/ralph.designs.2024" class="flex-1 py-2 px-4 border border-gray-700 hover:bg-gray-800 rounded text-center text-sm font-medium transition duration-300">
+                                Facebook Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition duration-500">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Brand Identity Project" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">Task Management App</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-violet-900 bg-opacity-40 text-violet-300 rounded text-xs">Vue.js</span>
+                                <span class="px-2 py-1 bg-red-900 bg-opacity-40 text-red-300 rounded text-xs">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Comprehensive branding package including logo, color palette, and style guide for startup.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 py-2 px-4 bg-purple-600 hover:bg-purple-700 rounded text-center text-sm font-medium transition duration-300">
+                                Live Demo
+                            </a>
+                            <a href="#" class="flex-1 py-2 px-4 border border-gray-700 hover:bg-gray-800 rounded text-center text-sm font-medium transition duration-300">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition duration-500">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobile App Interface Design" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">Weather Dashboard</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-green-900 bg-opacity-40 text-green-300 rounded text-xs">React</span>
+                                <span class="px-2 py-1 bg-blue-900 bg-opacity-40 text-blue-300 rounded text-xs">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Custom dashboard interface design and front-end implementation for fitness tracking app.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 py-2 px-4 bg-green-600 hover:bg-green-700 rounded text-center text-sm font-medium transition duration-300">
+                                Live Demo
+                            </a>
+                            <a href="#" class="flex-1 py-2 px-4 border border-gray-700 hover:bg-gray-800 rounded text-center text-sm font-medium transition duration-300">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 4 -->
+                <div class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition duration-500">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobile App Interface Design" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">Weather Dashboard</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-green-900 bg-opacity-40 text-green-300 rounded text-xs">React</span>
+                                <span class="px-2 py-1 bg-blue-900 bg-opacity-40 text-blue-300 rounded text-xs">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Custom dashboard interface design and front-end implementation for fitness tracking app.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 py-2 px-4 bg-red-600 hover:bg-red-700 rounded text-center text-sm font-medium transition duration-300">
+                                Live Demo
+                            </a>
+                            <a href="#" class="flex-1 py-2 px-4 border border-gray-700 hover:bg-gray-800 rounded text-center text-sm font-medium transition duration-300">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 5 -->
+                <div class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition duration-500">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobile App Interface Design" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">Weather Dashboard</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-pink-900 bg-opacity-40 text-green-300 rounded text-xs">React</span>
+                                <span class="px-2 py-1 bg-blue-900 bg-opacity-40 text-blue-300 rounded text-xs">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Custom dashboard interface design and front-end implementation for fitness tracking app.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 py-2 px-4 bg-pink-600 hover:bg-pink-700 rounded text-center text-sm font-medium transition duration-300">
+                                Live Demo
+                            </a>
+                            <a href="#" class="flex-1 py-2 px-4 border border-gray-700 hover:bg-gray-800 rounded text-center text-sm font-medium transition duration-300">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project 6 -->
+                <div class="project-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800 transition duration-500">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mobile App Interface Design" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-xl font-bold text-white">Weather Dashboard</h3>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-violet-900 bg-opacity-40 text-violet-300 rounded text-xs">React</span>
+                                <span class="px-2 py-1 bg-blue-900 bg-opacity-40 text-blue-300 rounded text-xs">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">
+                            Custom dashboard interface design and front-end implementation for fitness tracking app.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="flex-1 py-2 px-4 bg-violet-600 hover:bg-violet-700 rounded text-center text-sm font-medium transition duration-300">
+                                Live Demo
+                            </a>
+                            <a href="#" class="flex-1 py-2 px-4 border border-gray-700 hover:bg-gray-800 rounded text-center text-sm font-medium transition duration-300">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black relative">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 bg-gradient-to-r from-purple-500 to-cyan-500"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-500">Contact Me</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-cyan-400 text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">Email</h4>
+                                <p class="text-gray-400">krdesigns023@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-purple-400 text-xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">Phone</h4>
+                                <p class="text-gray-400">+63 958 7745 811</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-pink-400 text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-lg mb-1">Location</h4>
+                                <p class="text-gray-400">San Roque, Talisay City, Cebu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <h4 class="font-medium text-lg mb-4">Follow Me</h4>
+                        <div class="flex space-x-6">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-blue-400 hover:bg-gray-700 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-blue-600 hover:bg-gray-700 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-gray-800 hover:bg-gray-300 transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:text-pink-500 hover:bg-gray-700 transition duration-300">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white transition duration-300" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white transition duration-300" placeholder="Your Email">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 text-white transition duration-300" placeholder="Subject">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white transition duration-300" placeholder="Your Message"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg font-medium text-white hover:from-purple-600 hover:to-blue-600 transition duration-300">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p class="text-sm text-gray-400">
+                        &copy; 2025 Ralph Joaquin Villarin. All rights reserved.
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-gray-400">
+                        Made with <i class="fas fa-heart text-pink-500 mx-1"></i> by Ralph Joaquin
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Add animation to elements when they come into view
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.skill-card, .project-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Set initial state for animation
+        document.querySelectorAll('.skill-card, .project-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        });
+
+        // Run animation check on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        // Run once on page load
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
