@@ -3,1169 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ralph | Creative Designer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="IMAGES/ICOO.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Ralph Joaquin Villarin | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="IMAGES/ICOO.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
-            overflow-x: hidden;
-        }
-        
-        .glass-card {
-            background: rgba(15, 23, 42, 0.5);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(148, 163, 184, 0.15);
-        }
-        
-        .gradient-text {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        
-        .floating {
-            animation: floating 6s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .typewriter {
-            border-right: 2px solid;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 3.5s steps(30) infinite alternate,
-                       blink-caret .75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            0% { width: 0 }
-            50% { width: 100% }
-            100% { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #38bdf8 }
-        }
-        
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
-        }
-        
-        .project-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-        }
-        
-        .grid-pattern {
-            background-image: 
-                linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        
-        .nav-link {
-            position: relative;
-            padding-bottom: 8px;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .nav-link:nth-child(1)::after { background: #38bdf8; }
-        .nav-link:nth-child(2)::after { background: #a78bfa; }
-        .nav-link:nth-child(3)::after { background: #34d399; }
-        .nav-link:nth-child(4)::after { background: #f59e0b; }
-        .nav-link:nth-child(5)::after { background: #ec4899; }
-        
-        .category-btn {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .category-btn::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: currentColor;
-            transition: width 0.3s ease;
-        }
-        
-        .category-btn:hover::after {
-            width: 100%;
-        }
-        
-        .category-btn.active {
-            color: #f59e0b;
-            font-weight: 600;
-        }
-        
-        .category-btn.active::after {
-            width: 100%;
-        }
-        
-        .input-field {
-            transition: all 0.3s ease;
-        }
-        
-        .input-field:focus {
-            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        .pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-    </style>
 </head>
-<body class="grid-pattern">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold flex items-center">
-                        <span class="gradient-text bg-gradient-to-r from-sky-400 to-blue-600">RALPH</span>
-                        <span class="ml-2 w-2 h-2 rounded-full bg-sky-400 animate-pulse">&nbsp;&nbsp;&nbsp;PORTOLIO</span>
-                    </a>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-slate-300 hover:text-sky-400 transition">
-                            <span>Home</span>
-                        </a>
-                        <a href="#about" class="nav-link text-slate-300 hover:text-purple-400 transition">
-                            <span>About</span>
-                        </a>
-                        <a href="#skills" class="nav-link text-slate-300 hover:text-emerald-400 transition">
-                            <span>Skills</span>
-                        </a>
-                        <a href="#projects" class="nav-link text-slate-300 hover:text-amber-400 transition">
-                            <span>Projects</span>
-                        </a>
-                        <a href="#contact" class="nav-link text-slate-300 hover:text-pink-400 transition">
-                            <span>Contact</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button onclick="toggleMenu()" class="text-slate-300 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <div class="px-2 pt-2 pb-3 space-y-3 sm:px-3">
-                    <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-sky-400 bg-slate-800">Home</a>
-                    <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-purple-400 hover:bg-slate-800">About</a>
-                    <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-400 hover:bg-slate-800">Skills</a>
-                    <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-amber-400 hover:bg-slate-800">Projects</a>
-                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-pink-400 hover:bg-slate-800">Contact</a>
-                </div>
-            </div>
+<body class="dark-theme">
+
+    <canvas id="doodleCanvas"></canvas>
+
+    <nav>
+        <a href="index.html" class="logo">RJV<span class="dot">.</span></a>
+        <div class="nav-right">
+            <a href="#about" class="nav-link">ABOUT ME</a>
+            <a href="#work" class="nav-link">SAMPLE PROJECTS</a>
+            <button id="theme-toggle" aria-label="Toggle Interface Theme">
+                <i class="fas fa-moon mode-icon"></i>
+            </button>
+            <a href="#contact" class="btn-primary">CONTACT<span class="btn-arrow">→</span></a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-        <div class="absolute -left-40 -top-40 w-80 h-80 bg-sky-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-20 animate-pulse"></div>
-        <div class="absolute -right-40 -bottom-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-soft-light filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 1s;"></div>
+    <header class="hero">
+        <div class="hero-aesthetic-container">
+            <div class="hero-meta-badge">
+                <span class="meta-line">SYSTEM IDENTITY // V.26</span>
+                <span class="meta-divider"></span>
+                <span class="meta-line">BOOKING COMMISSIONS // Q2 2026</span>
+            </div>
+            <div class="hero-main-title">
+                <h1 class="reveal-name">RALPH JOAQUIN</h1>
+                <h1 class="reveal-name accent-fill">VILLARIN</h1>
+            </div>
+            <div class="hero-footer-row">
+                <p class="hero-sub">Creative Systems Strategist specializing in high-performance sportswear and full-dye sublimation layouts. Engineering production-ready vector blueprints and flawless apparel assets optimized for manufacturing.</p>
+                
+                <div class="hero-socials">
+                    <a href="https://www.facebook.com/Walakiiin" target="_blank" class="hero-social-icon" aria-label="Facebook Connection"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hero-social-icon" aria-label="Instagram Connection"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hero-social-icon" aria-label="Messenger Connection"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="#" class="hero-social-icon" aria-label="Messenger Connection"><i class="fab fa-github "></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 flex flex-col md:flex-row items-center justify-between">
-            <div class="md:w-1/2 mb-12 md:mb-0">
-                <div class="text-sm font-mono text-sky-400 mb-4 flex items-center">
-                    <span class="w-3 h-3 rounded-full bg-sky-400 mr-2 animate-pulse"></span>
-                    HELLO, MY NAME IS
-                </div>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    <span class="gradient-text bg-gradient-to-r from-sky-400 to-blue-600">Ralph Villarin</span>
-                </h1>
-                <div class="text-xl md:text-2xl mb-6 typewriter text-sky-400 font-mono">Creative Designer & Developer</div>
-                <p class="text-slate-300 mb-8 text-lg max-w-2xl">
-                    I craft immersive digital experiences through thoughtful design and clean code. 
-                    Specializing in visual storytelling that engages and inspires.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-600 rounded-lg font-medium text-white hover:from-sky-600 hover:to-blue-700 transition duration-300 flex items-center group shadow-lg hover:shadow-sky-500/20">
-                        View Work <i class="fas fa-arrow-down ml-2 group-hover:translate-y-0.5 transition-transform"></i>
-                    </a>
-                    <a href="#contact" class="px-6 py-3 border border-slate-600 text-slate-300 rounded-lg font-medium hover:bg-slate-800/50 hover:border-sky-400 transition duration-300 flex items-center group shadow-lg hover:shadow-slate-500/10">
-                        Contact Me <i class="fas fa-paper-plane ml-2 group-hover:translate-x-0.5 transition-transform"></i>
-                    </a>
-                </div>
-                <div class="mt-12 flex space-x-6">
-                    <a href="https://github.com/ItsMeRalph27" class="text-slate-400 hover:text-slate-200 transition duration-300 text-xl hover:-translate-y-1">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.facebook.com/Walakiiin" class="text-slate-400 hover:text-blue-500 transition duration-300 text-xl hover:-translate-y-1">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/itsme.ralph07/" class="text-slate-400 hover:text-pink-500 transition duration-300 text-xl hover:-translate-y-1">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ralph-joaquin-villarin-96b77b344/" class="text-slate-400 hover:text-blue-400 transition duration-300 text-xl hover:-translate-y-1">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center relative">
-                <div class="relative">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-600 p-1 floating shadow-xl">
-                        <div class="w-full h-full rounded-2xl bg-slate-900 overflow-hidden flex items-center justify-center border border-slate-800">
-                            <img src="IMAGES/ITSME.jpg" alt="Profile" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <div class="absolute -bottom-5 -left-5 w-24 h-24 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 p-1 rotate-12 shadow-lg">
-                        <div class="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center border border-slate-800">
-                            <i class="fas fa-paint-brush text-2xl text-purple-400"></i>
-                        </div>
-                    </div>
-                    <div class="absolute -top-5 -right-5 w-20 h-20 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 p-1 -rotate-12 shadow-lg">
-                        <div class="w-full h-full rounded-xl bg-slate-900 flex items-center justify-center border border-slate-800">
-                            <i class="fas fa-code text-xl text-amber-400"></i>
-                        </div>
-                    </div>
-                </div>
+        <div class="tools-slider">
+            <div class="tools-track">
+                <div class="tool-item photoshop"><i class="fab fa-adobe"></i> Photoshop</div>
+                <div class="tool-item illustrator"><i class="fas fa-pen-nib"></i> Illustrator</div>
+                <div class="tool-item figma"><i class="fab fa-figma"></i> Figma</div>
+                <div class="tool-item filmora"><i class="fas fa-video"></i> Filmora</div>
+                <div class="tool-item canva"><i class="fas fa-palette"></i> Canva</div>
+                <div class="tool-item after-effects"><i class="fas fa-layer-group"></i> After Effects</div>
+                <div class="tool-item coreldraw"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
+                <div class="tool-item photoshop"><i class="fab fa-adobe"></i> Photoshop</div>
+                <div class="tool-item illustrator"><i class="fas fa-pen-nib"></i> Illustrator</div>
+                <div class="tool-item figma"><i class="fab fa-figma"></i> Figma</div>
+                <div class="tool-item filmora"><i class="fas fa-video"></i> Filmora</div>
+                <div class="tool-item canva"><i class="fas fa-palette"></i> Canva</div>
+                <div class="tool-item after-effects"><i class="fas fa-layer-group"></i> After Effects</div>
+                <div class="tool-item coreldraw"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 relative">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-slate-900 to-transparent z-10"></div>
-            <div class="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-slate-900 to-transparent z-10"></div>
-            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span class="gradient-text bg-gradient-to-r from-purple-500 to-pink-600">About Me</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+        <div class="about-container">
+            <div class="profile-column">
+                <div class="profile-frame" data-tilt>
+                    <img src="images/ITSME.jpg" alt="Ralph Joaquin Villarin" class="profile-pic">
+                </div>
+                
+                <a href="resume/Resume2025.pdf" download class="btn-detail resume-straight-btn">
+                    <span class="icon">↓</span> Download Resume
+                </a>
             </div>
             
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/3">
-                    <div class="glass-card p-1 rounded-2xl mb-8 shadow-xl">
-                        <div class="w-full h-full rounded-2xl bg-slate-900/80 border border-slate-800 overflow-hidden">
-                            <img src="IMAGES/About.jpg" alt="About Me" class="w-full h-full object-cover">
+            <div class="about-content">
+                <span class="tag functional-blink">● Open to freelance and contract roles</span>
+                <h2>Bridging Technical Precision &  <span class="highlight">Apparel Engineering.</span></h2>
+                <p class="large-bio">Operating at the intersection of high-velocity<strong> digital textile printing, custom apparel manufacturing, and multi-brand identity, </strong> I engineer high-performance visual solutions built for seamless production scaling.</p>
+                <p class="sub-bio">With over 5 years of dedicated domain experience, my methodology eliminates the friction between creative concept art and complex physical production. From full-dye sublimation vector layouts and garment mockups to high-precision automotive decal schemes and corporate branding assets, I ensure every anchor point, color calibration, and print template translates flawlessly from digital concept to heavy industrial environments.</p>
+                
+                <div class="professional-pillars content-layout">
+                    <div class="pillar-card">
+                        <i class="fas fa-bezier-curve pillar-icon"></i>
+                        <div class="pillar-info-block">
+                            <h4>Vector Precision</h4>
+                            <p>Flawless anchor points engineered for clean infinite scaling.</p>
                         </div>
                     </div>
-                    
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="glass-card p-4 rounded-xl border border-slate-800 hover:border-sky-400 transition duration-300 shadow-lg">
-                            <div class="text-2xl text-sky-400 mb-2">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <h3 class="font-bold mb-1">5+ Years</h3>
-                            <p class="text-sm text-slate-400">Experience</p>
+                    <div class="pillar-card">
+                        <i class="fas fa-shirt pillar-icon"></i>
+                        <div class="pillar-info-block">
+                            <h4>Sublimation Layouts</h4>
+                            <p>Production-ready templates mapped for industrial printing.</p>
                         </div>
-                        <div class="glass-card p-4 rounded-xl border border-slate-800 hover:border-purple-400 transition duration-300 shadow-lg">
-                            <div class="text-2xl text-purple-400 mb-2">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <h3 class="font-bold mb-1">50+</h3>
-                            <p class="text-sm text-slate-400">Projects</p>
+                    </div>
+                    <div class="pillar-card">
+                        <i class="fas fa-palette pillar-icon"></i>
+                        <div class="pillar-info-block">
+                            <h4>Brand Architecture</h4>
+                            <p>Consistent assets, tournament systems, and dynamic logos.</p>
+                        </div>
+                    </div>
+                    <div class="pillar-card">
+                        <i class="fas fa-font pillar-icon"></i>
+                        <div class="pillar-info-block">
+                            <h4>Display Typography</h4>
+                            <p>Bold layout composition optimized for visual impact.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="lg:w-2/3">
-                    <h3 class="text-2xl md:text-3xl font-bold mb-6">
-                        Creative Designer & Developer
-                    </h3>
-                    <p class="text-slate-300 mb-6 leading-relaxed">
-                        I'm Ralph Joaquin S. Villarin, a multidisciplinary designer with over 5 years of experience crafting visually 
-                        compelling and purposeful design solutions. With a Bachelor of Science in Information Technology from Asian College of Technology, 
-                        I bring a unique fusion of technical precision and creative vision to every project.
-                    </p>
-                    <p class="text-slate-300 mb-8 leading-relaxed">
-                       Specializing in game design, branding, print media, and digital content, I approach each design with a storytelling
-                       mindset—ensuring that every visual not only looks great but resonates with its audience. 
-                       Driven by a passion for quality, innovation, and meaningful impact, I aim to deliver designs that elevate brands and bring ideas to life.
-                    </p>
-                    
-                    <div class="mb-12">
-                        <h4 class="font-medium text-lg mb-6 text-slate-200">Design Tools Mastery</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium text-sky-300">Adobe Photoshop</span>
-                                    <span class="text-sm text-slate-400">95%</span>
-                                </div>
-                                <div class="w-full bg-slate-800 rounded-full h-2">
-                                    <div class="bg-gradient-to-r from-sky-400 to-blue-600 h-2 rounded-full skill-bar" style="width: 95%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium text-purple-300">Adobe Illustrator</span>
-                                    <span class="text-sm text-slate-400">90%</span>
-                                </div>
-                                <div class="w-full bg-slate-800 rounded-full h-2">
-                                    <div class="bg-gradient-to-r from-purple-400 to-pink-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium text-amber-300">CorelDRAW</span>
-                                    <span class="text-sm text-slate-400">85%</span>
-                                </div>
-                                <div class="w-full bg-slate-800 rounded-full h-2">
-                                    <div class="bg-gradient-to-r from-amber-400 to-orange-500 h-2 rounded-full skill-bar" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+        </div>
+
+        <div class="history-container">
+            <div class="history-column experience-side">
+                <h3 class="history-heading"><i class="fas fa-briefcase"></i> WORK EXPERIENCE </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">OCT 2024 - MAY  2026</span>
+                        <h4 class="timeline-title">Senior Graphic Artist</h4>
+                        <p class="timeline-org">CrisAngel Tailoring and Apparel</p>
+                        <p class="timeline-desc">Oversee the end-to-end manufacturing pipeline for custom sportswear and streetwear lines, ensuring seamless transition from concept to production. Engineer high-precision, full-dye sublimation vector layouts and construct detailed structural garment mockups. Collaborate closely with production teams to enforce strict quality control, aesthetic alignment, and color consistency across all textile prints.</p>
                     </div>
-                    
-                    <div class="mt-12">
-                        <h4 class="font-medium text-lg mb-6 text-slate-200">Client Testimonials</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-sky-500 transition duration-300 shadow-lg">
-                                <div class="flex mb-4">
-                                    <div class="text-amber-400">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                                <p class="text-slate-300 italic mb-4">
-                                    "Ralph's launcher and loading screen designs were exceptional. His attention to detail and color grading 
-                                    significantly elevated our game's visual identity."
-                                </p>
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full overflow-hidden mr-3 border border-slate-700">
-                                        <img src="IMAGES/Client1.jpg" alt="Randell" class="w-full h-full object-cover">
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-sky-400">Randell B.</h5>
-                                        <p class="text-sm text-slate-400">Game Developer, Cabal Odin</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-purple-500 transition duration-300 shadow-lg">
-                                <div class="flex mb-4">
-                                    <div class="text-amber-400">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                </div>
-                                <p class="text-slate-300 italic mb-4">
-                                    "The hotel promotional materials Ralph created perfectly captured our brand's essence. His creative vision 
-                                    and execution were outstanding."
-                                </p>
-                                <div class="flex items-center">
-                                    <div class="w-10 h-10 rounded-full overflow-hidden mr-3 border border-slate-700">
-                                        <img src="IMAGES/Client2.jpg" alt="Sarah" class="w-full h-full object-cover">
-                                    </div>
-                                    <div>
-                                        <h5 class="font-medium text-purple-400">Ace Trexie P.</h5>
-                                        <p class="text-sm text-slate-400">Marketing Manager, PSCI</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">JAN 2022 - OCT 2023</span>
+                        <h4 class="timeline-title">Freelance Graphic Designer</h4>
+                        <p class="timeline-org"> CABAL MMROPG Game & Don Macchiatos</p>
+                        <p class="timeline-desc">Designed comprehensive digital and print marketing materials for diverse brands, including social media campaigns and promotional posters for Don Macchiatos, alongside specialized UI assets and custom game launchers for the Cabal MMORPG community.</p>
                     </div>
-                    
-                    <a href="Resume2025.pdf" download class="inline-flex items-center mt-8 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium text-white hover:from-purple-700 hover:to-pink-700 transition duration-300 shadow-lg hover:shadow-pink-500/20">
-                        <i class="fas fa-download mr-2"></i> Download Resume
-                    </a>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">JUN 2022 - AUG 2024</span>
+                        <h4 class="timeline-title">Graphic Artist</h4>
+                        <p class="timeline-org">Syong Moto & Apparel </p>
+                        <p class="timeline-desc">Engineered comprehensive branding systems and promotional collateral for regional sports tournaments while designing high-precision vector decal schemes for custom motorcycle and automotive riding clubs, ensuring flawless execution across complex physical profiles.</p>
+                    </div>
+
+                        <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">MAR 2021 - APR 2022</span>
+                        <h4 class="timeline-title">Graphic Artist</h4>
+                        <p class="timeline-org">RKJ Clothing Co. </p>
+                        <p class="timeline-desc">Developed cohesive visual identities for regional sports tournaments and produced precise vector graphics for motorcycle riding clubs, maintaining strict execution quality from digital concept to complex physical application.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-column education-side">
+                <h3 class="history-heading"><i class="fas fa-graduation-cap"></i> ACADEMIC TIMELINE </h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2021 - 2025</span>
+                        <h4 class="timeline-title">Bachelor of Science in Information Technology</h4>
+                        <p class="timeline-org">Major in Multimedia Systems</p>
+                        <p class="timeline-desc">Synthesized software architecture paradigms, visual communication logic, and asset lifecycle deployment strategies. Applied strict engineering principles directly to the creation and optimization of digital and physical assets.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2019 - 2021</span>
+                        <h4 class="timeline-title">Senior High School Graduate</h4>
+                        <p class="timeline-org">Technical-Vocational-Livelihood (TVL) Track / ICT</p>
+                        <p class="timeline-desc">Acquired a deep functional baseline in object-oriented computing principles, digital illustration techniques, and formal database asset structures.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2013 - 2019</span>
+                        <h4 class="timeline-title">Junior High School</h4>
+                        <p class="timeline-org">Secondary Education Matrix</p>
+                        <p class="timeline-desc">Developed core foundational skills across technical draft applications, structural design thinking, and collaborative team environments.</p>
+                    </div>
+                       <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2007 - 2013</span>
+                        <h4 class="timeline-title">Elementary School </h4>
+                        <p class="timeline-org">Primary Education Matrix</p>
+                        <p class="timeline-desc">Developed core foundational skills across technical draft applications, structural design thinking, and collaborative team environments.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-slate-900/50 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span class="gradient-text bg-gradient-to-r from-emerald-400 to-cyan-500">My Skills</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto"></div>
+    <section id="work" class="portfolio-section">
+        <div class="section-header">
+            <span class="tag">Studio Records</span>
+            <h1>The Archives</h1>
+        </div>
+
+        <div class="archive-category-block">
+            <h2 class="category-title"><i class="fas fa-photo-film"></i> SOCIAL MEDIA AD</h2>
+            <div class="work-grid">
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/1.jpg" alt="LaMelo Poster Design">
+                        <div class="card-info"><span>01 / Friyay </span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/2.jpg" alt="Divas Poster Design">
+                        <div class="card-info"><span>02 / Buy 3 Get 1</span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/3.jpg" alt="Virtual Mapping Event">
+                        <div class="card-info"><span>03 / 3rd Anniversary</span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/4.jpg" alt="Beta Slates Poster">
+                        <div class="card-info"><span>04 / Anniversary Promo</span></div>
+                    </div>
+                </div>
+                   <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/5.jpg" alt="LaMelo Poster Design">
+                        <div class="card-info"><span>01 / Simbang Gabi </span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/6.jpg" alt="Divas Poster Design">
+                        <div class="card-info"><span>02 / GRAND OPENING </span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/7.jpg" alt="Virtual Mapping Event">
+                        <div class="card-info"><span>03 / PROMO</span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/SOCIAL MEDIA/8.jpg" alt="Beta Slates Poster">
+                        <div class="card-info"><span>04 / SUMMER </span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="archive-category-block">
+            <h2 class="category-title"><i class="fas fa-shirt"></i> Jersey Layout</h2>
+            <div class="work-grid">
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/JERSEY LAYOUT/IBA.png" alt="Full-Dye Sublimation Grid">
+                        <div class="card-info"><span>01 / Jersey Layout</span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/JERSEY LAYOUT/IBA2.png" alt="Athletic Jersey Vector Design">
+                        <div class="card-info"><span>02 / Jersey Layout</span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/JERSEY LAYOUT/PANSAT 1.png" alt="Streetwear Apparel Blueprint">
+                        <div class="card-info"><span>03 / Jersey Layout</span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/JERSEY LAYOUT/pansat 2.png" alt="Motorsport Variant Sublimation">
+                        <div class="card-info"><span>04 / Jersey Layout</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="archive-category-block">
+            <h2 class="category-title"><i class="fas fa-gamepad"></i> Game Poster</h2>
+            <div class="work-grid">
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/GAMEPOSTER/BETA.jpg" alt="Server Online Event Notice">
+                        <div class="card-info"><span>01 / BETA TEST </span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/GAMEPOSTER/LIKE.jpg" alt="Tournament Slate Card">
+                        <div class="card-info"><span>02 / Game Event</span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/GAMEPOSTER/SERVER UP.jpg" alt="Cyberpunk Aesthetic Tournament Flyer">
+                        <div class="card-info"><span>03 / Official Launch </span></div>
+                    </div>
+                </div>
+                <div class="work-card" data-tilt>
+                    <div class="card-inner">
+                        <img src="images/GAMEPOSTER/STREAMERS.jpg" alt="Gaming Main Stage Key Art">
+                        <div class="card-info"><span>04 / Looking for Streamers</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-branding">
+                <div class="contact-logo">RJV<span class="dot">.</span></div>
+                <h3>Let's start something <br><span class="accent-fill">exceptional.</span></h3>
+                <p class="contact-editorial-text">Currently accepting commissions for full-dye sublimation apparel, comprehensive brand guidelines, and high-precision vector design packages.</p>
+                
+                <div class="contact-details-grid">
+                    <div class="detail-block">
+                        <span class="detail-label">Direct Communication Line</span>
+                        <span class="detail-val">krdesigns023@gmail.com</span>
+                    </div>
+                    <div class="detail-block">
+                        <span class="detail-label">Studio HQ Location</span>
+                        <span class="detail-val">Cebu, Philippines</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Walakiiin" target="_blank" class="social-icon" aria-label="Facebook Link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram Link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Messenger Link"><i class="fab fa-facebook-messenger"></i></a>
+                </div>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Skill 1 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-sky-400 transition duration-300 group shadow-lg hover:shadow-sky-500/20">
-                    <div class="flex items-start mb-4">
-                        <div class="text-3xl text-sky-400 mr-4">
-                            <i class="fas fa-object-group"></i>
+            <div class="contact-form-block">
+                <form id="contact-form">
+                    <div class="input-row-split">
+                        <div class="input-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label>Your Identity / Brand Name</label>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">UI/UX Design</h3>
-                            <p class="text-sm text-slate-400">Creating intuitive and beautiful interfaces</p>
-                        </div>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
-                        <div class="bg-gradient-to-r from-sky-400 to-blue-500 h-2 rounded-full" style="width: 95%"></div>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-slate-800 text-sky-300 text-xs rounded-full">Figma</span>
-                        <span class="px-3 py-1 bg-slate-800 text-sky-300 text-xs rounded-full">Adobe XD</span>
-                        <span class="px-3 py-1 bg-slate-800 text-sky-300 text-xs rounded-full">Prototyping</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 2 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-purple-400 transition duration-300 group shadow-lg hover:shadow-purple-500/20">
-                    <div class="flex items-start mb-4">
-                        <div class="text-3xl text-purple-400 mr-4">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Graphic Design</h3>
-                            <p class="text-sm text-slate-400">Visual storytelling through design</p>
+                        <div class="input-group">
+                            <input type="text" id="project-type" placeholder=" ">
+                            <label>Service Field (e.g., Sublimation, Logo)</label>
                         </div>
                     </div>
-                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
-                        <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-2 rounded-full" style="width: 90%"></div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label>Email Point of Contact</label>
                     </div>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-slate-800 text-purple-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-3 py-1 bg-slate-800 text-purple-300 text-xs rounded-full">Illustrator</span>
-                        <span class="px-3 py-1 bg-slate-800 text-purple-300 text-xs rounded-full">Typography</span>
+                    <div class="input-group">
+                        <textarea id="message" rows="1" required placeholder=" "></textarea>
+                        <label>Project Goals Outline & Details</label>
                     </div>
-                </div>
-                
-                <!-- Skill 3 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-amber-400 transition duration-300 group shadow-lg hover:shadow-amber-500/20">
-                    <div class="flex items-start mb-4">
-                        <div class="text-3xl text-amber-400 mr-4">
-                            <i class="fas fa-vector-square"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Vector Art</h3>
-                            <p class="text-sm text-slate-400">Precision illustration and logos</p>
-                        </div>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
-                        <div class="bg-gradient-to-r from-amber-400 to-orange-500 h-2 rounded-full" style="width: 85%"></div>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Illustrator</span>
-                        <span class="px-3 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">CorelDRAW</span>
-                        <span class="px-3 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Logo Design</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 4 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-emerald-400 transition duration-300 group shadow-lg hover:shadow-emerald-500/20">
-                    <div class="flex items-start mb-4">
-                        <div class="text-3xl text-emerald-400 mr-4">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Color Theory</h3>
-                            <p class="text-sm text-slate-400">Strategic color application</p>
-                        </div>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
-                        <div class="bg-gradient-to-r from-emerald-400 to-cyan-500 h-2 rounded-full" style="width: 95%"></div>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-slate-800 text-emerald-300 text-xs rounded-full">Color Grading</span>
-                        <span class="px-3 py-1 bg-slate-800 text-emerald-300 text-xs rounded-full">Branding</span>
-                        <span class="px-3 py-1 bg-slate-800 text-emerald-300 text-xs rounded-full">Psychology</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 5 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-pink-400 transition duration-300 group shadow-lg hover:shadow-pink-500/20">
-                    <div class="flex items-start mb-4">
-                        <div class="text-3xl text-pink-400 mr-4">
-                            <i class="fas fa-camera"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Photo Editing</h3>
-                            <p class="text-sm text-slate-400">Enhancing and manipulating images</p>
-                        </div>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
-                        <div class="bg-gradient-to-r from-pink-400 to-rose-500 h-2 rounded-full" style="width: 80%"></div>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-slate-800 text-pink-300 text-xs rounded-full">Retouching</span>
-                        <span class="px-3 py-1 bg-slate-800 text-pink-300 text-xs rounded-full">Compositing</span>
-                        <span class="px-3 py-1 bg-slate-800 text-pink-300 text-xs rounded-full">Color Correction</span>
-                    </div>
-                </div>
-                
-                <!-- Skill 6 -->
-                <div class="glass-card p-6 rounded-xl border border-slate-800 hover:border-cyan-400 transition duration-300 group shadow-lg hover:shadow-cyan-500/20">
-                    <div class="flex items-start mb-4">
-                        <div class="text-3xl text-cyan-400 mr-4">
-                            <i class="fas fa-tshirt"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Apparel Design</h3>
-                            <p class="text-sm text-slate-400">Creating wearable art</p>
-                        </div>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-2 mb-2">
-                        <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full" style="width: 85%"></div>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Jerseys</span>
-                        <span class="px-3 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">T-Shirts</span>
-                        <span class="px-3 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Sublimation</span>
-                    </div>
-                </div>
+                    <button type="submit" class="btn-primary form-submit">Launch Design Brief <span class="btn-arrow">→</span></button>
+                </form>
             </div>
         </div>
     </section>
-<!-- Projects Section -->
-<section id="projects" class="py-20 relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-slate-900/70 to-slate-900"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        <span class="gradient-text bg-gradient-to-r from-amber-400 to-orange-500">Featured Projects</span>
-      </h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto"></div>
-      <p class="text-slate-400 mt-6 max-w-2xl mx-auto">
-        A selection of my recent work across various design disciplines and industries.
-      </p>
-    </div>
 
-    <div class="flex flex-wrap justify-center gap-3 mb-10">
-      <button onclick="showCategory('logo')" class="category-btn active px-4 py-2 rounded-full text-sm font-medium">LOGO DESIGN</button>
-      <button onclick="showCategory('poster')" class="category-btn px-4 py-2 rounded-full text-sm font-medium">SOCIAL MEDIA GRAPHICS</button>
-      <button onclick="showCategory('apparel')" class="category-btn px-4 py-2 rounded-full text-sm font-medium">SUBLIMATION DESIGN</button>
-      <button onclick="showCategory('digital')" class="category-btn px-4 py-2 rounded-full text-sm font-medium">POSTER DESIGN</button>
-      <button onclick="showCategory('branding')" class="category-btn px-4 py-2 rounded-full text-sm font-medium">SOCIAL MEDIA GRAPHICS</button>
-    </div>
-
-<!-- LOGO -->
-<div id="logo-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- PROJECT 1 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500 hover:shadow-[0_0_20px_blue] transition duration-300">
-                                <img src="IMAGES/LOGO/CA.png" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">COURTLINE APPAREL </h3>
-                            <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">LOGO</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                            The Courtline Apparel logo features a bold and dynamic design that reflects the energy and passion of streetwear fused with the spirit of basketball culture.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 2 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500 hover:shadow-[0_0_20px_blue] transition duration-300">
-                                <img src="IMAGES/LOGO/CM.png" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">CABAL MAXIMUS </h3>
-                            <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">LOGO</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                            The CABAL MAXIMUS MMORPG logo embodies a powerful fusion of dark fantasy and heroic elements, symbolizing epic battles and legendary strength in a mystical world.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 3 -->
-        <div class="project-card" data-category="logo">
-            <div class="rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500 transition duration-300">
-                <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-blue-500 hover:shadow-[0_0_20px_blue] transition duration-300">
-                <img src="IMAGES/LOGO/CHOBITO.png" alt="CHOBITO GAMING Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                </div>
-                <div class="p-6">
-                <div class="flex justify-between items-start mb-3">
-                    <h3 class="text-xl font-bold text-white">CHOBITO GAMING</h3>
-                    <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">LOGO</span>
-                </div>
-                <p class="text-slate-200 mb-4">
-                    The Chobito Gaming logo showcases a playful yet fierce identity, blending vibrant visuals with a bold gaming aesthetic perfect for streaming and digital presence.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Freepik</span>
-                    <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Photoshop</span>
-                    <span class="px-2 py-1 bg-slate-800 text-blue-300 text-xs rounded-full">Illustrator</span>
-                </div>
-                </div>  
-            </div>
-        </div>
-     <!-- Add 5 more logo boxes -->
-</div>
-<!-- SOCIAL MEDIA POSTER -->
-    <div id="poster-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- PROJECT 1 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-green-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-green-500 hover:shadow-[0_0_20px_green] transition duration-300">
-                                <img src="IMAGES/SOCIAL MEDIA ADD/VIRTUAL.jpg" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">VIRTUAL REALITY</h3>
-                            <span class="px-2 py-1 bg-slate-800 text-green-300 text-xs rounded-full">SOCIAL MEDIA AD</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                          Experience the future now with virtual reality—where imagination meets immersive technology!
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-green-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-green-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-green-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 2 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500 hover:shadow-[0_0_20px_cyan] transition duration-300">
-                                <img src="IMAGES/SOCIAL MEDIA ADD/LAMELO.jpg" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">LAMELO BALL</h3>
-                            <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">SOCIAL MEDIA AD</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                            LaMelo Ball is a dynamic and flashy NBA point guard known for his elite passing, court vision, and confident playmaking style.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 3 -->
-        <div class="project-card" data-category="logo">
-            <div class="rounded-xl overflow-hidden border border-slate-800 hover:border-purple-500 transition duration-300">
-                <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-purple-500 hover:shadow-[0_0_20px_purple] transition duration-300">
-                <img src="IMAGES/SOCIAL MEDIA ADD/DIVAS.jpg" alt="CHOBITO GAMING Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                </div>
-                <div class="p-6">
-                <div class="flex justify-between items-start mb-3">
-                    <h3 class="text-xl font-bold text-white">DIVAS NIGHTOUT</h3>
-                    <span class="px-2 py-1 bg-slate-800 text-purple-300 text-xs rounded-full">SOCIAL MEDIA AD</span>
-                </div>
-                <p class="text-slate-200 mb-4">
-                    Divas Night Out is a glamorous, high-energy event celebrating female empowerment, fun, and friendship with music, fashion, and unforgettable vibes.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-800 text-purple-300 text-xs rounded-full">Freepik</span>
-                    <span class="px-2 py-1 bg-slate-800 text-purple-300 text-xs rounded-full">Photoshop</span>
-                    <span class="px-2 py-1 bg-slate-800 text-purple-300 text-xs rounded-full">Illustrator</span>
-                </div>
-                </div>  
-            </div>
-        </div>           
-             </div>
-<!-- SUBLIMATION POST -->
-    <div id="apparel-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">     
-    <!-- PROJECT 1 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500 hover:shadow-[0_0_20px_cyan] transition duration-300">
-                                <img src="IMAGES/SUBLIMATION/JERSEY WHOLE.jpg" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">CENTRAL ONE</h3>
-                            <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">BASKETBALL JERSEY</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⚠️ Copyright Disclaimer<p>
-                                "COURTLINE APPAREL" is a brand owned by Courtline Studios specializing in premium sportswear.</p>
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 2 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500 hover:shadow-[0_0_20px_cyan] transition duration-300">
-                                <img src="IMAGES/SUBLIMATION/POLO.jpg" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">ST. CECILIA'S</h3>
-                            <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">BASKETBALL JERSEY</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⚠️ Copyright Disclaimer<p>
-                                "COURTLINE APPAREL" is a brand owned by Courtline Studios specializing in premium sportswear.</p>
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 3 -->
-        <div class="project-card" data-category="logo">
-            <div class="rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500 transition duration-300">
-                <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-cyan-500 hover:shadow-[0_0_20px_cyan] transition duration-300">
-                <img src="IMAGES/SUBLIMATION/WARMER.jpg" alt="CHOBITO GAMING Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                </div>
-                <div class="p-6">
-                <div class="flex justify-between items-start mb-3">
-                    <h3 class="text-xl font-bold text-white">EMERALD HORIZON</h3>
-                    <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">BASKETBALL JERSEY</span>
-                </div>
-                <p class="text-slate-200 mb-4">
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⚠️ Copyright Disclaimer<p>
-                                "COURTLINE APPAREL" is a brand owned by Courtline Studios specializing in premium sportswear.</p>
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Freepik</span>
-                    <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Photoshop</span>
-                    <span class="px-2 py-1 bg-slate-800 text-cyan-300 text-xs rounded-full">Illustrator</span>
-                </div>
-                </div>  
-            </div>
-        </div>           
-    </div>
-<!-- GAME POSTER -->
-    <div id="digital-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- PROJECT 1 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-red-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-red-500 hover:shadow-[0_0_20px_red] transition duration-300">
-                                <img src="IMAGES/GAME POSTER/SERVER UP.jpg" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">SERVER UP</h3>
-                            <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">GAME POSTER</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⚠️ Copyright Disclaimer<p>
-                                "CABAL MAYHEM" is a fan-made game poster created for entertainment purposes only and is not affiliated with or endorsed by ESTsoft or the official CABAL franchise.</p>
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 2 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-red-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-red-500 hover:shadow-[0_0_20px_red] transition duration-300">
-                                <img src="IMAGES/GAME POSTER/BETA.jpg" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">BETA TEST</h3>
-                            <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">GAME POSTER</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⚠️ Copyright Disclaimer<p>
-                                "CABAL MAYHEM" is a fan-made game poster created for entertainment purposes only and is not affiliated with or endorsed by ESTsoft or the official CABAL franchise.</p>
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 3 -->
-        <div class="project-card" data-category="logo">
-            <div class="rounded-xl overflow-hidden border border-slate-800 hover:border-red-500 transition duration-300">
-                <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-red-500 hover:shadow-[0_0_20px_red] transition duration-300">
-                <img src="IMAGES/GAME POSTER/LIKE.jpg" alt="CHOBITO GAMING Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                </div>
-                <div class="p-6">
-                <div class="flex justify-between items-start mb-3">
-                    <h3 class="text-xl font-bold text-white">LIKE & SHARE</h3>
-                    <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">GAME POSTER</span>
-                </div>
-                <p class="text-slate-200 mb-4">
-                       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⚠️ Copyright Disclaimer<p>
-                                "CABAL MAYHEM" is a fan-made game poster created for entertainment purposes only and is not affiliated with or endorsed by ESTsoft or the official CABAL franchise.</p>
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Freepik</span>
-                    <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Photoshop</span>
-                    <span class="px-2 py-1 bg-slate-800 text-red-300 text-xs rounded-full">Illustrator</span>
-                </div>
-                </div>  
-            </div>
-        </div>
-    </div>
-<!-- OPTIONAL -->
-    <div id="branding-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-         <!-- PROJECT 1 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-amber-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-amber-500 hover:shadow-[0_0_20px_#f59e0b] transition duration-300">
-                                <img src="IMAGES/LOGO/CA.png" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">COURTLINE APPAREL </h3>
-                            <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">LOGO</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                            The Courtline Apparel logo features a bold and dynamic design that reflects the energy and passion of streetwear fused with the spirit of basketball culture.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 2 -->
-            <div class="project-card" data-category="logo">
-                        <div class="glass-card h-full rounded-xl overflow-hidden border border-slate-800 hover:border-amber-500">
-                            <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-amber-500 hover:shadow-[0_0_20px_#f59e0b] transition duration-300">
-                                <img src="IMAGES/LOGO/CM.png" alt="Cabal Mayhem Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                            </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">CABAL MAXIMUS </h3>
-                            <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">LOGO</span>
-                        </div>
-                        <p class="text-slate-200 mb-4">
-                            The CABAL MAXIMUS MMORPG logo embodies a powerful fusion of dark fantasy and heroic elements, symbolizing epic battles and legendary strength in a mystical world.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Freepik</span>
-                        <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Photoshop</span>
-                        <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- PROJECT 3 -->
-        <div class="project-card" data-category="logo">
-            <div class="rounded-xl overflow-hidden border border-slate-800 hover:border-amber-500 transition duration-300">
-                <div class="w-[384px] h-[398px] rounded-xl overflow-hidden border border-slate-800 hover:border-amber-500 hover:shadow-[0_0_20px_#f59e0b] transition duration-300">
-                <img src="IMAGES/LOGO/CHOBITO.png" alt="CHOBITO GAMING Logo" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
-                </div>
-                <div class="p-6">
-                <div class="flex justify-between items-start mb-3">
-                    <h3 class="text-xl font-bold text-white">CHOBITO GAMING</h3>
-                    <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">LOGO</span>
-                </div>
-                <p class="text-slate-200 mb-4">
-                    The Chobito Gaming logo showcases a playful yet fierce identity, blending vibrant visuals with a bold gaming aesthetic perfect for streaming and digital presence.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Freepik</span>
-                    <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Photoshop</span>
-                    <span class="px-2 py-1 bg-slate-800 text-amber-300 text-xs rounded-full">Illustrator</span>
-                </div>
-                </div>  
-            </div>
-        </div>     
-    </div>
-  </div>
-</section>
-<script>
-function showCategory(category) {
-  // Hide all category containers
-  const categories = ['logo', 'poster', 'apparel', 'digital', 'branding'];
-  categories.forEach(cat => {
-    document.getElementById(`${cat}-container`).classList.add('hidden');
-  });
-
-  // Remove active class from all buttons
-  document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
-
-  // Show the selected category container
-  document.getElementById(`${category}-container`).classList.remove('hidden');
-
-  // Set active button
-  event.target.classList.add('active');
-}
-</script>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-900 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span class="gradient-text bg-gradient-to-r from-pink-500 to-rose-500">Get In Touch</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto"></div>
-                <p class="text-slate-400 mt-6 max-w-2xl mx-auto">
-                    Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
-                </p>
+    <footer>
+        <div class="footer-dashboard-row">
+            <div class="footer-segment-left">
+                <span class="footer-brand">RJV<span class="dot">.</span></span>
+                <span class="footer-matrix-divider">|</span>
+                <p class="footer-intel">© 2026 RALPH JOAQUIN VILLARIN. ALL RIGHTS RESERVED.</p>
             </div>
             
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2">
-                    <div class="glass-card p-8 rounded-2xl border border-slate-800 shadow-xl">
-                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="text-pink-400 text-xl mr-4 mt-1">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-lg mb-1">Email</h4>
-                                    <a href="mailto:act.rvillarin@gmail.com" class="text-slate-300 hover:text-pink-400 transition">act.rvillarin@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-sky-400 text-xl mr-4 mt-1">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-lg mb-1">Phone</h4>
-                                    <a href="tel:+639567745811" class="text-slate-300 hover:text-sky-400 transition">+63 956 774 5811</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="text-purple-400 text-xl mr-4 mt-1">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-lg mb-1">Location</h4>
-                                    <p class="text-slate-300">San Roque, Talisay City, Cebu, Philippines</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-12">
-                            <h4 class="font-medium text-lg mb-4">Connect With Me</h4>
-                            <div class="flex space-x-4">
-                                <a href="https://www.facebook.com/Walakiiin" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-blue-600 hover:text-white transition duration-300 border border-slate-700 shadow-lg hover:-translate-y-1">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/ralph-joaquin-villarin-96b77b344/" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-blue-500 hover:text-white transition duration-300 border border-slate-700 shadow-lg hover:-translate-y-1">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://github.com/ItsMeRalph27" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-gray-700 hover:text-white transition duration-300 border border-slate-700 shadow-lg hover:-translate-y-1">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.instagram.com/itsme.ralph07/" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition duration-300 border border-slate-700 shadow-lg hover:-translate-y-1">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <div class="glass-card p-8 rounded-2xl border border-slate-800 shadow-xl">
-                        <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
-                        
-                        <form class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                                    <input type="text" id="name" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 text-white transition duration-300 input-field" placeholder="Your Name" required>
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                                    <input type="email" id="email" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 text-white transition duration-300 input-field" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-                                <input type="text" id="subject" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white transition duration-300 input-field" placeholder="Subject" required>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                                <textarea id="message" rows="5" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white transition duration-300 input-field" placeholder="Your Message" required></textarea>
-                            </div>
-                            
-                            <div>
-                                <button type="submit" class="w-full px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 rounded-lg font-medium text-white hover:from-pink-700 hover:to-rose-700 transition duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/20">
-                                    <i class="fas fa-paper-plane mr-2"></i> Send Message
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="footer-segment-center">
+                <p class="footer-credo-text">STRUCTURED WITH BALANCE. ENGINEERED WITH INTENT.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <p class="text-sm text-slate-400">
-                        &copy; 2025 Ralph Villarin. All rights reserved.
-                    </p>
-                </div>
-                <div class="text-center md:text-right">
-                    <p class="text-sm text-slate-400">
-                        Made with <i class="fas fa-heart text-pink-500 mx-1"></i> by Ralph
-                    </p>
-                </div>
+            
+            <div class="footer-segment-right">
+                <span class="footer-data-node"><i class="fas fa-location-dot"></i> CEBU, PHILIPPINES</span>
+                <span class="footer-matrix-divider">//</span>
+                <span class="footer-live-node"><span class="pulse-indicator"></span> LIVE FROM THE STUDIO</span>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Toggle mobile menu
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-
-        // Projects filtering
-        function filterProjects(category) {
-            const projects = document.querySelectorAll('.project-card');
-            const buttons = document.querySelectorAll('.category-btn');
-            
-            // Update active button
-            buttons.forEach(btn => {
-                if (btn.textContent.toLowerCase() === category || 
-                    (btn.textContent === 'All' && category === 'all')) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-            
-            // Filter projects
-            projects.forEach(project => {
-                if (category === 'all') {
-                    project.style.display = 'block';
-                } else {
-                    if (project.getAttribute('data-category') === category) {
-                        project.style.display = 'block';
-                    } else {
-                        project.style.display = 'none';
-                    }
-                }
-            });
-        }
-
-        // Animate skill bars on scroll
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-bar');
-            
-            skillBars.forEach(bar => {
-                const rect = bar.getBoundingClientRect();
-                const isVisible = (rect.top <= window.innerHeight * 0.8) && 
-                                  (rect.bottom >= window.innerHeight * 0.2);
-                
-                if (isVisible && !bar.classList.contains('animated')) {
-                    bar.classList.add('animated');
-                    const width = bar.style.width;
-                    bar.style.width = '0%';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 100);
-                }
-            });
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set initial active filter button
-            document.querySelector('.category-btn').classList.add('active');
-            
-            // Add scroll event listener for animations
-            window.addEventListener('scroll', animateSkillBars);
-            // Run once on load
-            animateSkillBars();
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
