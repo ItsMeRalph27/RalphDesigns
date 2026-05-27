@@ -3,388 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ralph Joaquin Villarin | Portfolio</title>
+    <title>Ralph Joaquin Villarin | Premium Creative Portfolio</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="icon" href="IMAGES/ICOO.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="IMAGES/ICOO.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dark-theme">
 
-    <canvas id="doodleCanvas"></canvas>
+    <div class="scanner-shutter-left"></div>
+    <div class="scanner-shutter-right"></div>
+
+    <canvas id="portfolioMatrixCanvas"></canvas>
 
     <nav>
-        <a href="index.html" class="logo">RJV<span class="dot">.</span></a>
+        <a href="#intro" class="logo routing-link">RJV<span class="dot">.</span></a>
         <div class="nav-right">
-            <a href="#about" class="nav-link">ABOUT ME</a>
-            <a href="#work" class="nav-link">SAMPLE PROJECTS</a>
+            <a href="#intro" class="nav-link routing-link">HOME</a>
+            <a href="#about" class="nav-link routing-link">ABOUT ME & EXPERIENCES</a>
+            <a href="#projects" class="nav-link routing-link">PROJECT ARCHIVES</a>
             <button id="theme-toggle" aria-label="Toggle Interface Theme">
                 <i class="fas fa-moon mode-icon"></i>
             </button>
-            <a href="#contact" class="btn-primary">CONTACT<span class="btn-arrow">→</span></a>
+            <a href="#contact" class="btn-primary routing-link">CONTACT MATRIX <span class="btn-arrow">→</span></a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-aesthetic-container">
-            <div class="hero-meta-badge">
-                <span class="meta-line">SYSTEM IDENTITY // V.26</span>
-                <span class="meta-divider"></span>
-                <span class="meta-line">BOOKING COMMISSIONS // Q2 2026</span>
-            </div>
-            <div class="hero-main-title">
-                <h1 class="reveal-name">RALPH JOAQUIN</h1>
-                <h1 class="reveal-name accent-fill">VILLARIN</h1>
-            </div>
-            <div class="hero-footer-row">
-                <p class="hero-sub">Creative Systems Strategist specializing in high-performance sportswear and full-dye sublimation layouts. Engineering production-ready vector blueprints and flawless apparel assets optimized for manufacturing.</p>
-                
-                <div class="hero-socials">
-                    <a href="https://www.facebook.com/Walakiiin" target="_blank" class="hero-social-icon" aria-label="Facebook Connection"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/rjey_villarin/" class="hero-social-icon" aria-label="Instagram Connection"><i class="fab fa-instagram"></i></a>
-                    <a href="http://m.me/Walakiiin" class="hero-social-icon" aria-label="Messenger Connection"><i class="fab fa-facebook-messenger"></i></a>
-                    <a href="https://github.com/ItsMeRalph27" class="hero-social-icon" aria-label="Messenger Connection"><i class="fab fa-github "></i></a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="about" class="about-section">
+    <main id="view-matrix">
         
-        <div class="tools-slider">
-            <div class="tools-track">
-                <div class="tool-item photoshop"><i class="fab fa-adobe"></i> Photoshop</div>
-                <div class="tool-item illustrator"><i class="fas fa-pen-nib"></i> Illustrator</div>
-                <div class="tool-item figma"><i class="fab fa-figma"></i> Figma</div>
-                <div class="tool-item filmora"><i class="fas fa-video"></i> Filmora</div>
-                <div class="tool-item canva"><i class="fas fa-palette"></i> Canva</div>
-                <div class="tool-item after-effects"><i class="fas fa-layer-group"></i> After Effects</div>
-                <div class="tool-item coreldraw"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
-                <div class="tool-item photoshop"><i class="fab fa-adobe"></i> Photoshop</div>
-                <div class="tool-item illustrator"><i class="fas fa-pen-nib"></i> Illustrator</div>
-                <div class="tool-item figma"><i class="fab fa-figma"></i> Figma</div>
-                <div class="tool-item filmora"><i class="fas fa-video"></i> Filmora</div>
-                <div class="tool-item canva"><i class="fas fa-palette"></i> Canva</div>
-                <div class="tool-item after-effects"><i class="fas fa-layer-group"></i> After Effects</div>
-                <div class="tool-item coreldraw"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
-            </div>
-        </div>
-
-        <div class="about-container">
-            <div class="profile-column">
-                <div class="profile-frame" data-tilt>
-                    <img src="images/ME/ITSME.jpg" alt="Ralph Joaquin Villarin" class="profile-pic">
+        <section id="intro" class="view-panel active-panel">
+            <div class="hero-aesthetic-container">
+                <div class="hero-meta-badge">
+                    <span class="meta-line">GRAPHIC DESIGNER // VERSION 4.0</span>
+                    <span class="meta-divider"></span>
+                    <span class="meta-line">OPEN FOR BOOKING COMMISSIONS // 2026</span>
                 </div>
-                
-                <a href="resume/Resume2025.pdf" download class="btn-detail resume-straight-btn">
-                    <span class="icon">↓</span> Download Resume
-                </a>
-            </div>
-            
-            <div class="about-content">
-                <span class="tag functional-blink">● Open to freelance and contract roles</span>
-                <h2>Bridging Technical Precision &  <span class="highlight">Apparel Engineering.</span></h2>
-                <p class="large-bio">Operating at the intersection of high-velocity<strong> digital textile printing, custom apparel manufacturing, and multi-brand identity, </strong> I engineer high-performance visual solutions built for seamless production scaling.</p>
-                <p class="sub-bio">With over 5 years of dedicated domain experience, my methodology eliminates the friction between creative concept art and complex physical production. From full-dye sublimation vector layouts and garment mockups to high-precision automotive decal schemes and corporate branding assets, I ensure every anchor point, color calibration, and print template translates flawlessly from digital concept to heavy industrial environments.</p>
-                
-                <div class="professional-pillars content-layout">
-                    <div class="pillar-card">
-                        <i class="fas fa-bezier-curve pillar-icon"></i>
-                        <div class="pillar-info-block">
-                            <h4>Vector Precision</h4>
-                            <p>Flawless anchor points engineered for clean infinite scaling.</p>
-                        </div>
-                    </div>
-                    <div class="pillar-card">
-                        <i class="fas fa-shirt pillar-icon"></i>
-                        <div class="pillar-info-block">
-                            <h4>Sublimation Layouts</h4>
-                            <p>Production-ready templates mapped for industrial printing.</p>
-                        </div>
-                    </div>
-                    <div class="pillar-card">
-                        <i class="fas fa-palette pillar-icon"></i>
-                        <div class="pillar-info-block">
-                            <h4>Brand Architecture</h4>
-                            <p>Consistent assets, tournament systems, and dynamic logos.</p>
-                        </div>
-                    </div>
-                    <div class="pillar-card">
-                        <i class="fas fa-font pillar-icon"></i>
-                        <div class="pillar-info-block">
-                            <h4>Display Typography</h4>
-                            <p>Bold layout composition optimized for visual impact.</p>
+                <div class="hero-main-title">
+                    <h1 class="reveal-name">RALPH JOAQUIN</h1>
+                    <h1 class="reveal-name accent-fill">VILLARIN</h1>
+                </div>
+                <div class="hero-footer-row">
+                    <p class="hero-sub">Senior Graphic Designer backed by 6 years of hands-on expertise bridging the gap between raw creative concept and factory-floor production. Expert in mathematical vector blueprints, full-dye sublimation templates, and high-performance apparel layouts. Fusing industrial manufacturing precision with aggressive streetwear aesthetics for brands that demand flawless execution.</p>
+                    <div class="hero-actions-row">
+                        <a href="#projects" class="btn-primary routing-link">EXPLORE WORK ARCHIVES <span class="btn-arrow">→</span></a>
+                        <div class="hero-socials">
+                            <a href="https://www.facebook.com/Walakiiin" target="_blank" class="hero-social-icon" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/rjey_villarin/" class="hero-social-icon" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+                            <a href="https://m.me/Walakiiin" class="hero-social-icon" aria-label="Messenger Link"><i class="fab fa-facebook-messenger"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="history-container">
-            <div class="history-column experience-side">
-                <h3 class="history-heading"><i class="fas fa-briefcase"></i> WORK EXPERIENCE </h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">OCT 2024 - MAY  2026</span>
-                        <h4 class="timeline-title">Senior Graphic Artist</h4>
-                        <p class="timeline-org">CrisAngel Tailoring and Apparel</p>
-                        <p class="timeline-desc">Oversee the end-to-end manufacturing pipeline for custom sportswear and streetwear lines, ensuring seamless transition from concept to production. Engineer high-precision, full-dye sublimation vector layouts and construct detailed structural garment mockups. Collaborate closely with production teams to enforce strict quality control, aesthetic alignment, and color consistency across all textile prints.</p>
-                    </div>
-                      <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">JAN 2022 - OCT 2023</span>
-                        <h4 class="timeline-title">Freelance Graphic Designer</h4>
-                        <p class="timeline-org"> CABAL MMROPG Game & Don Macchiatos</p>
-                        <p class="timeline-desc">Designed comprehensive digital and print marketing materials for diverse brands, including social media campaigns and promotional posters for Don Macchiatos, alongside specialized UI assets and custom game launchers for the Cabal MMORPG community.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">JUN 2022 - AUG 2024</span>
-                        <h4 class="timeline-title">Graphic Artist</h4>
-                        <p class="timeline-org">Syong Moto & Apparel </p>
-                        <p class="timeline-desc">Engineered comprehensive branding systems and promotional collateral for regional sports tournaments while designing high-precision vector decal schemes for custom motorcycle and automotive riding clubs, ensuring flawless execution across complex physical profiles.</p>
-                    </div>
-
-                        <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">MAR 2021 - APR 2022</span>
-                        <h4 class="timeline-title">Graphic Artist</h4>
-                        <p class="timeline-org">RKJ Clothing Co. </p>
-                        <p class="timeline-desc">Developed cohesive visual identities for regional sports tournaments and produced precise vector graphics for motorcycle riding clubs, maintaining strict execution quality from digital concept to complex physical application.</p>
-                    </div>
+        <section id="about" class="view-panel">
+            <div class="tools-slider">
+                <div class="tools-track">
+                    <div class="tool-item"><i class="fab fa-adobe"></i> Photoshop</div>
+                    <div class="tool-item"><i class="fas fa-pen-nib"></i> Illustrator</div>
+                    <div class="tool-item"><i class="fas fa-code"></i> HTML5 & CSS3</div>
+                    <div class="tool-item"><i class="fab fa-figma"></i> Figma</div>
+                    <div class="tool-item"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="tool-item"><i class="fas fa-video"></i> Filmora</div>
+                    <div class="tool-item"><i class="fas fa-palette"></i> Canva</div>
+                    <div class="tool-item"><i class="fas fa-layer-group"></i> After Effects</div>
+                    <div class="tool-item"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
+                    <div class="tool-item"><i class="fab fa-adobe"></i> Photoshop</div>
+                    <div class="tool-item"><i class="fas fa-pen-nib"></i> Illustrator</div>
+                    <div class="tool-item"><i class="fas fa-code"></i> HTML5 & CSS3</div>
+                    <div class="tool-item"><i class="fab fa-figma"></i> Figma</div>
+                    <div class="tool-item"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="tool-item"><i class="fas fa-video"></i> Filmora</div>
+                    <div class="tool-item"><i class="fas fa-palette"></i> Canva</div>
+                    <div class="tool-item"><i class="fas fa-layer-group"></i> After Effects</div>
+                    <div class="tool-item"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
                 </div>
             </div>
 
-            <div class="history-column education-side">
-                <h3 class="history-heading"><i class="fas fa-graduation-cap"></i> ACADEMIC TIMELINE </h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">2021 - 2025</span>
-                        <h4 class="timeline-title">Bachelor of Science in Information Technology</h4>
-                        <p class="timeline-org">Major in Programming</p>
-                        <p class="timeline-desc">Synthesized software architecture paradigms, visual communication logic, and asset lifecycle deployment strategies. Applied strict engineering principles directly to the creation and optimization of digital and physical assets.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">2019 - 2021</span>
-                        <h4 class="timeline-title">Senior High School Graduate</h4>
-                        <p class="timeline-org">Technical-Vocational-Livelihood (TVL) Track / ICT</p>
-                        <p class="timeline-desc">Acquired a deep functional baseline in object-oriented computing principles, digital illustration techniques, and formal database asset structures.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">2013 - 2019</span>
-                        <h4 class="timeline-title">Junior High School</h4>
-                        <p class="timeline-org">Secondary Education Matrix</p>
-                        <p class="timeline-desc">Developed core foundational skills across technical draft applications, structural design thinking, and collaborative team environments.</p>
-                    </div>
-                       <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="timeline-date">2007 - 2013</span>
-                        <h4 class="timeline-title">Elementary School </h4>
-                        <p class="timeline-org">Primary Education Matrix</p>
-                        <p class="timeline-desc">Developed core foundational skills across technical draft applications, structural design thinking, and collaborative team environments.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="work" class="portfolio-section">
-        <div class="section-header">
-            <span class="tag">Studio Records</span>
-            <h1>The Archives</h1>
-        </div>
-
-        <div class="archive-category-block">
-            <h2 class="category-title"><i class="fas fa-photo-film"></i> SOCIAL MEDIA AD</h2>
-            <div class="work-grid">
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/1.jpg" alt="LaMelo Poster Design">
-                        <div class="card-info"><span>01 / Friyay </span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/2.jpg" alt="Divas Poster Design">
-                        <div class="card-info"><span>02 / Buy 3 Get 1</span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/3.jpg" alt="Virtual Mapping Event">
-                        <div class="card-info"><span>03 / REFRESH</span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/4.jpg" alt="Beta Slates Poster">
-                        <div class="card-info"><span>04 / SUMMER PROMO </span></div>
-                    </div>
-                </div>
-                   <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/5.jpg" alt="LaMelo Poster Design">
-                        <div class="card-info"><span>05 / MONDAY NASAD! </span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/6.jpg" alt="Divas Poster Design">
-                        <div class="card-info"><span>06 / GRAND OPENING </span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/7.jpg" alt="Virtual Mapping Event">
-                        <div class="card-info"><span>07 / CRAVINGS </span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/SOCIAL MEDIA/8.jpg" alt="Beta Slates Poster">
-                        <div class="card-info"><span>08 / BONIFACIO DAY </span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="archive-category-block">
-            <h2 class="category-title"><i class="fas fa-shirt"></i> Jersey Layout</h2>
-            <div class="work-grid">
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/JERSEY LAYOUT/IBA.png" alt="Full-Dye Sublimation Grid">
-                        <div class="card-info"><span>01 / Jersey Layout</span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/JERSEY LAYOUT/IBA2.png" alt="Athletic Jersey Vector Design">
-                        <div class="card-info"><span>02 / Jersey Layout</span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/JERSEY LAYOUT/PANSAT 1.png" alt="Streetwear Apparel Blueprint">
-                        <div class="card-info"><span>03 / Jersey Layout</span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/JERSEY LAYOUT/pansat 2.png" alt="Motorsport Variant Sublimation">
-                        <div class="card-info"><span>04 / Jersey Layout</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="archive-category-block">
-            <h2 class="category-title"><i class="fas fa-gamepad"></i> Game Poster</h2>
-            <div class="work-grid">
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/GAMEPOSTER/BETA.jpg" alt="Server Online Event Notice">
-                        <div class="card-info"><span>01 / BETA TEST </span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/GAMEPOSTER/LIKE.jpg" alt="Tournament Slate Card">
-                        <div class="card-info"><span>02 / Game Event</span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/GAMEPOSTER/SERVER UP.jpg" alt="Cyberpunk Aesthetic Tournament Flyer">
-                        <div class="card-info"><span>03 / Official Launch </span></div>
-                    </div>
-                </div>
-                <div class="work-card" data-tilt>
-                    <div class="card-inner">
-                        <img src="images/GAMEPOSTER/STREAMERS.jpg" alt="Gaming Main Stage Key Art">
-                        <div class="card-info"><span>04 / Looking for Streamers</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-branding">
-                <div class="contact-logo">RJV<span class="dot">.</span></div>
-                <h3>Let's start something <br><span class="accent-fill">exceptional.</span></h3>
-                <p class="contact-editorial-text">Currently accepting commissions for full-dye sublimation apparel, comprehensive brand guidelines, and high-precision vector design packages.</p>
-                
-                <div class="contact-details-grid">
-                    <div class="detail-block">
-                        <span class="detail-label">Direct Communication Line</span>
-                        <span class="detail-val">krdesigns023@gmail.com</span>
-                    </div>
-                    <div class="detail-block">
-                        <span class="detail-label">Studio HQ Location</span>
-                        <span class="detail-val">Cebu, Philippines</span>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://www.facebook.com/Walakiiin" target="_blank" class="social-icon" aria-label="Facebook Link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/rjey_villarin/" class="social-icon" aria-label="Instagram Link"><i class="fab fa-instagram"></i></a>
-                    <a href="http://m.me/Walakiiin" class="social-icon" aria-label="Messenger Link"><i class="fab fa-facebook-messenger"></i></a>
-                </div>
-            </div>
-            
-            <div class="contact-form-block">
-                <form id="contact-form">
-                    <div class="input-row-split">
-                        <div class="input-group">
-                            <input type="text" id="name" required placeholder=" ">
-                            <label>Your Identity / Brand Name</label>
+            <div class="panel-container large-layout-scroller">
+                <div class="about-split-grid">
+                    <div class="about-media-block">
+                        <div class="profile-frame">
+                            <img src="images/ITSME.jpg" alt="Ralph Joaquin Villarin" class="profile-pic">
                         </div>
-                        <div class="input-group">
-                            <input type="text" id="project-type" placeholder=" ">
-                            <label>Service Field (e.g., Sublimation, Logo)</label>
+                        <a href="resume/Resume2025.pdf" download class="btn-detail resume-download-trigger">
+                            <i class="fas fa-arrow-down-long icon"></i> DOWNLOAD RESUME FILE
+                        </a>
+                    </div>
+                    
+                    <div class="about-editorial-block">
+                        <span class="tag functional-blink">OPEN FOR COMMISSIONS</span>
+                        <h2 class="panel-inner-title">Bridging Pure Vector Aesthetics & <span class="accent-fill">Fabrication Engineering.</span></h2>
+                        <p class="large-bio">Operating at the intersection of high-velocity digital textile printing, custom apparel manufacturing, and multi-brand identity, I engineer high-performance visual solutions built for seamless production scaling.</p>
+                        <P class="sub-bio">
+                            With over 6 years of dedicated domain experience, my methodology eliminates the friction between raw creative concept art and complex physical production. I don't just design; I construct.
+From full-dye sublimation vector layouts and multi-panel garment mockups to high-precision automotive decal schemes and corporate branding ecosystems, I ensure every anchor point, color profile, and print template translates flawlessly from digital concept to heavy industrial manufacturing environments.
+                        </P>
+                        <h3 class="subsection-header">// TECHNICAL SKILL SET INVENTORY</h3>
+                        <div class="skills-capabilities-matrix">
+                            <div class="skill-pill"><i class="fas fa-bezier-curve"></i> Vector Scaling Architecture</div>
+                            <div class="skill-pill"><i class="fas fa-shirt"></i> Sublimation Template Mapping</div>
+                            <div class="skill-pill"><i class="fas fa-palette"></i> Streetwear Brand Identity</div>
+                            <div class="skill-pill"><i class="fas fa-object-group"></i> Advanced Media Layout Composition</div>
+                            <div class="skill-pill"><i class="fas fa-laptop-code"></i> Frontend Interface Prototyping</div>
+                            <div class="skill-pill"><i class="fas fa-film"></i> Dynamic Motion Post-Production</div>
+                        </div>
+
+                        <div class="stats-cards-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon-wrap"><i class="fas fa-folder-open"></i></div>
+                                <div class="stat-meta">
+                                    <span class="stat-number">400+</span>
+                                    <span class="stat-label">Sublimation Layouts Created </span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon-wrap"><i class="fas fa-user-check"></i></div>
+                                <div class="stat-meta">
+                                    <span class="stat-number">200+</span>
+                                    <span class="stat-label">Custom Jerseys & Apparel Completed</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon-wrap"><i class="fas fa-bolt"></i></div>
+                                <div class="stat-meta">
+                                    <span class="stat-number"> 99% </span>
+                                    <span class="stat-label">On-Time Execution</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon-wrap"><i class="fas fa-clock"></i></div>
+                                <div class="stat-meta">
+                                    <span class="stat-number">6+</span>
+                                    <span class="stat-label">Years Vector Experience</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="input-group">
-                        <input type="email" id="email" required placeholder=" ">
-                        <label>Email Point of Contact</label>
+                </div>
+
+                <div class="history-grid-wrapper">
+                    <div class="history-column">
+                        <h3 class="history-channel-title"><i class="fas fa-briefcase"></i> EXPERIENCE ARCHIVES</h3>
+                        <div class="timeline-track">
+                            <div class="timeline-node">
+                                <div class="node-bullet"></div>
+                                <span class="node-date">OCT 2024 - MAY 2026</span>
+                                <h4 class="node-designation">Senior Graphic Artist</h4>
+                                <p class="node-organization">CrisAngel Tailoring and Apparel</p>
+                                <p class="node-details">Oversee the end-to-end manufacturing pipeline for custom sportswear and streetwear lines, ensuring seamless transition from concept to production. Engineer high-precision, full-dye sublimation vector layouts and construct detailed structural garment mockups. Collaborate closely with production teams to enforce strict quality control, aesthetic alignment, and color consistency across all textile prints.</p>
+                            </div>
+                            <div class="timeline-node">
+                                <div class="node-bullet"></div>
+                                <span class="node-date">JUN 2022 - AUG 2024</span>
+                                <h4 class="node-designation">Graphic Designer</h4>
+                                <p class="node-organization">Syong Moto & Apparel</p>
+                                <p class="node-details">Designed comprehensive digital and print marketing materials for diverse brands, including social media campaigns and promotional posters for Don Macchiatos, alongside specialized UI assets and custom game launchers for the Cabal MMORPG community.</p>
+                            </div>
+                            <div class="timeline-node">
+                                <div class="node-bullet"></div>
+                                <span class="node-date">JUN 2022 - OCT 2023</span>
+                                <h4 class="node-designation">Freelance Graphic Designer</h4>
+                                <p class="node-organization">Don Macchiatos</p>
+                                <p class="node-details">Designed comprehensive digital and print marketing materials for diverse brands, including social media campaigns and promotional posters for Don Macchiatos, alongside specialized UI assets and custom game launchers for the Cabal MMORPG community.</p>
+                            </div>
+                            <div class="timeline-node">
+                                <div class="node-bullet"></div>
+                                <span class="node-date">MAR 2021 - APR 2022</span>
+                                <h4 class="node-designation">Graphic Artist</h4>
+                                <p class="node-organization">RKJ Clothing Co.</p>
+                                <p class="node-details">Developed cohesive visual identities for regional sports tournaments and produced precise vector graphics for motorcycle riding clubs, maintaining strict execution quality from digital concept to complex physical application.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <textarea id="message" rows="1" required placeholder=" "></textarea>
-                        <label>Project Goals Outline & Details</label>
+
+                    <div class="history-column">
+                        <h3 class="history-channel-title"><i class="fas fa-graduation-cap"></i> ACADEMIC PIPELINE</h3>
+                        <div class="timeline-track">
+                            <div class="timeline-node">
+                                <div class="node-bullet"></div>
+                                <span class="node-date">2021 - 2025</span>
+                                <h4 class="node-designation">BS In Information Technology</h4>
+                                <p class="node-organization">Major in Multimedia Systems</p>
+                                <p class="node-details">Advanced integration courses across human-interface layout standards, object-oriented database logic frameworks, and advanced visual design theories.</p>
+                            </div>
+                            <div class="timeline-node">
+                                <div class="node-bullet"></div>
+                                <span class="node-date">2019 - 2021</span>
+                                <h4 class="node-designation">Senior High School Graduate</h4>
+                                <p class="node-organization">TVL Track - Information & Communications Technology</p>
+                                <p class="node-details">Core functional learning modules for structural media systems development, vector mechanics, and baseline web coding patterns.</p>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit" class="btn-primary form-submit">Launch Design Brief <span class="btn-arrow">→</span></button>
-                </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="view-panel">
+            <div class="panel-container project-workspace-100">
+                <div class="projects-layout-wrapper">
+                    <div class="projects-sidebar-nav">
+                        <span class="tag">STUDIO ARTIFACTS</span>
+                        <h2 class="panel-inner-title">Project<br><span class="accent-fill">Archives.</span></h2>
+                        <div class="category-tab-deck-vertical">
+                            <button class="tab-trigger active-tab" data-target-deck="social-media-deck"><i class="fas fa-photo-film"></i> SOCIAL MEDIA ADS</button>
+                            <button class="tab-trigger" data-target-deck="jersey-layout-deck"><i class="fa-solid fa-basketball"></i> BASKETBALL JERSEY </button>
+                            <button class="tab-trigger" data-target-deck="game-poster-deck"><i class="fa-solid fa-person-dress"></i> POLOSHIRT </button>
+                            <button class="tab-trigger" data-target-deck="branding-identity-deck"><i class="fa-solid fa-shirt"></i> T-SHIRT </button>
+                            <button class="tab-trigger" data-target-deck="jersey-shorts-deck"><i class="fas fa-briefcase"></i> MESH SHORTS </button>
+                        </div>
+                        <p class="click-instruction-tip"><i class="fas fa-expand-arrows-alt"></i> Click active center card to present in full zoom.</p>
+                    </div>
+
+                    <div class="projects-display-content">
+                        <div id="social-media-deck" class="slider-deck-container active-deck">
+                            <div class="depth-slider-viewport">
+                                <div class="depth-slider-track">
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/1.jpg" alt="Layout A"></div><div class="depth-card-meta"><h3>FRIYAY BLEND SLATE</h3><span>01 // ADVERTISEMENT LAYOUT</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/2.jpg" alt="Layout B"></div><div class="depth-card-meta"><h3>BUY 3 GET 1 SYSTEM</h3><span>02 // COMMERCIAL PROMOTION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/3.jpg" alt="Layout C"></div><div class="depth-card-meta"><h3>PROMOTION MATRIX</h3><span>03 // MEDIA CONVERSION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/4.jpg" alt="Layout D"></div><div class="depth-card-meta"><h3>SUMMER CAMPAIGN ART</h3><span>04 // MARKETING FLYER</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/5.jpg" alt="Layout E"></div><div class="depth-card-meta"><h3>MONDAY NASAD!</h3><span>05 // MEDIA CONVERSION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/6.jpg" alt="Layout F"></div><div class="depth-card-meta"><h3>SUMMER CAMPAIGN ART</h3><span>06 // MARKETING FLYER</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/7.jpg" alt="Layout G"></div><div class="depth-card-meta"><h3>GRAND OPENING</h3><span>07 // MARKETING FLYER</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/8.jpg" alt="Layout H"></div><div class="depth-card-meta"><h3>BONIFACIO DAY</h3><span>08 // MARKETING FLYER</span></div></div>
+                                </div>
+                            </div>
+                            <div class="slider-controls">
+                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
+                                <div class="slider-pagination"></div>
+                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div id="jersey-layout-deck" class="slider-deck-container">
+                            <div class="depth-slider-viewport">
+                                <div class="depth-slider-track">
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA.png" alt="Jersey A"></div><div class="depth-card-meta"><h3>IBA UPPER</h3><span>01 // FULL DYE SUBLIMATION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA2.png" alt="Jersey B"></div><div class="depth-card-meta"><h3>IBA SHORT</h3><span>02 // FULL DYE SUBLIMATION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/PANSAT 1.png" alt="Jersey C"></div><div class="depth-card-meta"><h3>PANSAT UPPER</h3><span>03 // FULL DYE SUBLIMATION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/pansat 2.png" alt="Jersey D"></div><div class="depth-card-meta"><h3>PANSAT SHORT</h3><span>04 // FULL DYE SUBLIMATION</span></div></div>
+                                     <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/1.png" alt="Jersey A"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLUE UPPER</h3><span>05 // FULL DYE SUBLIMATION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/2.png" alt="Jersey B"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLUE SHORT</h3><span>06 // FULL DYE SUBLIMATION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/3.png" alt="Jersey C"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLACK UPPER</h3><span>07 // FULL DYE SUBLIMATION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/4.png" alt="Jersey D"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLACK SHORT</h3><span>08 // FULL DYE SUBLIMATION</span></div></div>
+                                </div>
+                            </div>
+                            <div class="slider-controls">
+                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
+                                <div class="slider-pagination"></div>
+                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div id="game-poster-deck" class="slider-deck-container">
+                            <div class="depth-slider-viewport">
+                                <div class="depth-slider-track">
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/GAMEPOSTER/BETA.jpg" alt="Game Poster A"></div><div class="depth-card-meta"><h3>BETA STAGE ANNOUNCEMENT</h3><span>01 // MMORPG LAUNCH ART</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/GAMEPOSTER/LIKE.jpg" alt="Game Poster B"></div><div class="depth-card-meta"><h3>COMMUNITY ENGAGEMENT</h3><span>02 // TOURNAMENT COLLATERAL</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/GAMEPOSTER/SERVER UP.jpg" alt="Game Poster C"></div><div class="depth-card-meta"><h3>SERVER LIVE OPERATION</h3><span>03 // DIGITAL LANDING SYSTEM</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/GAMEPOSTER/STREAMERS.jpg" alt="Game Poster D"></div><div class="depth-card-meta"><h3>CREATOR PROGRAM SIGNAL</h3><span>04 // CAMPAIGN KEY ART</span></div></div>
+                                </div>
+                            </div>
+                            <div class="slider-controls">
+                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
+                                <div class="slider-pagination"></div>
+                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div id="branding-identity-deck" class="slider-deck-container">
+                            <div class="depth-slider-viewport">
+                                <div class="depth-slider-track">
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/vector-logo.jpg" alt="Branding A"></div><div class="depth-card-meta"><h3>NEON CYBERNETIC EMBLEM</h3><span>01 // VECTOR ICON BLUEPRINT</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/streetwear-mock.jpg" alt="Branding B"></div><div class="depth-card-meta"><h3>STREETWEAR TYPE BRANDING</h3><span>02 // APPAREL REVOLUTION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/decal-map.jpg" alt="Branding C"></div><div class="depth-card-meta"><h3>MOTOR SPORT CONTOUR DECAL</h3><span>03 // PACK GEOMETRY</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/typography.jpg" alt="Branding D"></div><div class="depth-card-meta"><h3>BRUTALIST TEXT MECHANICS</h3><span>04 // LOGOTYPE SYSTEM</span></div></div>
+                                </div>
+                            </div>
+                            <div class="slider-controls">
+                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
+                                <div class="slider-pagination"></div>
+                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div id="jersey-shorts-deck" class="slider-deck-container">
+                            <div class="depth-slider-viewport">
+                                <div class="depth-slider-track">
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA.png" alt="Jersey A"></div><div class="depth-card-meta"><h3>IBA SPORTSWEAR PRIMAL</h3><span>01 // SUBLIMATION BLUEPRINT</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA2.png" alt="Jersey B"></div><div class="depth-card-meta"><h3>TEAM SUITE STRUCT MATRIX</h3><span>02 // VECTOR RENDER</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/PANSAT 1.png" alt="Jersey C"></div><div class="depth-card-meta"><h3>PANSAT IDENTITY CORE</h3><span>03 // FULL DYE FABRICATION</span></div></div>
+                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/pansat 2.png" alt="Jersey D"></div><div class="depth-card-meta"><h3>PANSAT DEPLOYMENT B</h3><span>04 // SPORT BLUEPRINT</span></div></div>
+                                </div>
+                            </div>
+                            <div class="slider-controls">
+                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
+                                <div class="slider-pagination"></div>
+                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="view-panel">
+            <div class="panel-container">
+                <span class="tag">DIRECT INTAKE PORT</span>
+                <h2 class="panel-inner-title">Initialize A Visual <span class="accent-fill">Project Grid.</span></h2>
+                <div class="contact-split-layout">
+                    <div class="contact-editorial-sidebar">
+                        <p class="sidebar-description-text">Ready to launch clean high-precision manufacturing files, clothing matrices, or complete visual identities. Let's engineer assets with intent.</p>
+                        <div class="data-block-node">
+                            <span class="node-label">DIRECT STUDIO COMMS</span>
+                            <span class="node-value">krdesigns023@gmail.com</span>
+                        </div>
+                        <div class="data-block-node">
+                            <span class="node-label">GEOGRAPHIC LOCATION BASELINE</span>
+                            <span class="node-value">Cebu, Philippines</span>
+                        </div>
+                        
+                        <div class="contact-social-grid">
+                            <span class="node-label">SECURE MATRIX NETWORKS</span>
+                            <div class="contact-social-links">
+                                <a href="https://www.facebook.com/Walakiiin" target="_blank" class="contact-icon-node" title="Facebook Connect"><i class="fab fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/rjey_villarin/" class="contact-icon-node" title="Instagram Creative"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="contact-icon-node" title="Behance Network Portfolio"><i class="fab fa-behance"></i></a>
+                                <a href="#" class="contact-icon-node" title="LinkedIn Business Directory"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://m.me/Walakiiin" class="contact-icon-node" title="Messenger Link Direct"><i class="fab fa-facebook-messenger"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form" class="studio-minimal-form">
+                        <div class="form-input-wrapper">
+                            <input type="text" placeholder="Identity / Business Organization Name" required>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <input type="email" placeholder="Your Active Email Channel" required>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <textarea placeholder="Outline Project Service Scope & Objectives..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit-trigger">Launch Digital Brief Matrix →</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="presentation-zoom-portal" id="zoomPortal" aria-hidden="true">
+        <button class="portal-close-trigger" aria-label="Close Presentation"><i class="fas fa-times"></i></button>
+        <div class="portal-content-wrap">
+            <img src="" alt="Enlarged Project Frame" id="portalTargetImage">
+            <div class="portal-meta-display">
+                <h2 id="portalHeading">PROJECT TITLE</h2>
+                <p id="portalSub">META INFORMATION</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="footer-dashboard-row">
-            <div class="footer-segment-left">
-                <span class="footer-brand">RJV<span class="dot">.</span></span>
-                <span class="footer-matrix-divider">|</span>
-                <p class="footer-intel">© 2026 RALPH JOAQUIN VILLARIN. ALL RIGHTS RESERVED.</p>
-            </div>
-            
-            <div class="footer-segment-center">
-                <p class="footer-credo-text">STRUCTURED WITH BALANCE. ENGINEERED WITH INTENT.</p>
-            </div>
-            
-            <div class="footer-segment-right">
-                <span class="footer-data-node"><i class="fas fa-location-dot"></i> CEBU, PHILIPPINES</span>
-                <span class="footer-matrix-divider">//</span>
-                <span class="footer-live-node"><span class="pulse-indicator"></span> LIVE FROM THE STUDIO</span>
-            </div>
+            <span class="footer-brand">RJV<span class="dot">.</span></span>
+            <span class="footer-credo-text">STRUCTURED VISUALS. FABRICATED WITH PURPOSE.</span>
+            <span class="footer-live-node"><span class="pulse-indicator"></span> LIGHTNING CORE ACTIVE</span>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
