@@ -1,380 +1,485 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ralph Joaquin Villarin | Premium Creative Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="IMAGES/ICOO.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080909">
+  <meta name="description" content="RJ Portfolio — Graphic Designer, Web Designer and Digital Creative specializing in apparel, sublimation, branding and visual systems.">
+  <title>RJ Portfolio — Graphic Designer & Creative Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="ICOO.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-theme">
-
-    <div class="scanner-shutter-left"></div>
-    <div class="scanner-shutter-right"></div>
-
-    <canvas id="portfolioMatrixCanvas"></canvas>
-
-    <nav>
-        <a href="#intro" class="logo routing-link">RJV<span class="dot">.</span></a>
-        <div class="nav-right">
-            <a href="#intro" class="nav-link routing-link">HOME</a>
-            <a href="#about" class="nav-link routing-link">ABOUT ME & EXPERIENCES</a>
-            <a href="#projects" class="nav-link routing-link">PROJECT ARCHIVES</a>
-            <button id="theme-toggle" aria-label="Toggle Interface Theme">
-                <i class="fas fa-moon mode-icon"></i>
-            </button>
-            <a href="#contact" class="btn-primary routing-link">CONTACT MATRIX <span class="btn-arrow">→</span></a>
-        </div>
+<body>
+  <div class="page-loader" aria-hidden="true">
+    <div class="loader-mark"><span>R</span><i></i></div>
+    <div class="loader-meta"><span>RJ PORTFOLIO</span><span>CREATIVE PORTFOLIO</span></div>
+  </div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+  <canvas id="designerCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-trail" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="RJ Portfolio home"><span>R</span> RJ PORTFOLIO</a>
+    <nav id="desktopNav" aria-label="Primary navigation">
+      <a href="#about">About &amp; Experience</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
     </nav>
-
-    <main id="view-matrix">
-        
-        <section id="intro" class="view-panel active-panel">
-            <div class="hero-aesthetic-container">
-                <div class="hero-meta-badge">
-                    <span class="meta-line">GRAPHIC DESIGNER // VERSION 4.0</span>
-                    <span class="meta-divider"></span>
-                    <span class="meta-line">OPEN FOR BOOKING COMMISSIONS // 2026</span>
-                </div>
-                <div class="hero-main-title">
-                    <h1 class="reveal-name">RALPH JOAQUIN</h1>
-                    <h1 class="reveal-name accent-fill">VILLARIN</h1>
-                </div>
-                <div class="hero-footer-row">
-                    <p class="hero-sub">Senior Graphic Designer backed by 6 years of hands-on expertise bridging the gap between raw creative concept and factory-floor production. Expert in mathematical vector blueprints, full-dye sublimation templates, and high-performance apparel layouts. Fusing industrial manufacturing precision with aggressive streetwear aesthetics for brands that demand flawless execution.</p>
-                    <div class="hero-actions-row">
-                        <a href="#projects" class="btn-primary routing-link">EXPLORE WORK ARCHIVES <span class="btn-arrow">→</span></a>
-                        <div class="hero-socials">
-                            <a href="https://www.facebook.com/Walakiiin" target="_blank" class="hero-social-icon" aria-label="Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/rjey_villarin/" class="hero-social-icon" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
-                            <a href="https://m.me/Walakiiin" class="hero-social-icon" aria-label="Messenger Link"><i class="fab fa-facebook-messenger"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="view-panel">
-            <div class="tools-slider">
-                <div class="tools-track">
-                    <div class="tool-item"><i class="fab fa-adobe"></i> Photoshop</div>
-                    <div class="tool-item"><i class="fas fa-pen-nib"></i> Illustrator</div>
-                    <div class="tool-item"><i class="fas fa-code"></i> HTML5 & CSS3</div>
-                    <div class="tool-item"><i class="fab fa-figma"></i> Figma</div>
-                    <div class="tool-item"><i class="fab fa-js"></i> JavaScript</div>
-                    <div class="tool-item"><i class="fas fa-video"></i> Filmora</div>
-                    <div class="tool-item"><i class="fas fa-palette"></i> Canva</div>
-                    <div class="tool-item"><i class="fas fa-layer-group"></i> After Effects</div>
-                    <div class="tool-item"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
-                    <div class="tool-item"><i class="fab fa-adobe"></i> Photoshop</div>
-                    <div class="tool-item"><i class="fas fa-pen-nib"></i> Illustrator</div>
-                    <div class="tool-item"><i class="fas fa-code"></i> HTML5 & CSS3</div>
-                    <div class="tool-item"><i class="fab fa-figma"></i> Figma</div>
-                    <div class="tool-item"><i class="fab fa-js"></i> JavaScript</div>
-                    <div class="tool-item"><i class="fas fa-video"></i> Filmora</div>
-                    <div class="tool-item"><i class="fas fa-palette"></i> Canva</div>
-                    <div class="tool-item"><i class="fas fa-layer-group"></i> After Effects</div>
-                    <div class="tool-item"><i class="fas fa-bezier-curve"></i> CorelDraw</div>
-                </div>
-            </div>
-
-            <div class="panel-container large-layout-scroller">
-                <div class="about-split-grid">
-                    <div class="about-media-block">
-                        <div class="profile-frame">
-                            <img src="images/ITSME.jpg" alt="Ralph Joaquin Villarin" class="profile-pic">
-                        </div>
-                        <a href="resume/Resume2025.pdf" download class="btn-detail resume-download-trigger">
-                            <i class="fas fa-arrow-down-long icon"></i> DOWNLOAD RESUME FILE
-                        </a>
-                    </div>
-                    
-                    <div class="about-editorial-block">
-                        <span class="tag functional-blink">OPEN FOR COMMISSIONS</span>
-                        <h2 class="panel-inner-title">Bridging Pure Vector Aesthetics & <span class="accent-fill">Fabrication Engineering.</span></h2>
-                        <p class="large-bio">Operating at the intersection of high-velocity digital textile printing, custom apparel manufacturing, and multi-brand identity, I engineer high-performance visual solutions built for seamless production scaling.</p>
-                        <P class="sub-bio">
-                            With over 6 years of dedicated domain experience, my methodology eliminates the friction between raw creative concept art and complex physical production. I don't just design; I construct.
-From full-dye sublimation vector layouts and multi-panel garment mockups to high-precision automotive decal schemes and corporate branding ecosystems, I ensure every anchor point, color profile, and print template translates flawlessly from digital concept to heavy industrial manufacturing environments.
-                        </P>
-                        <h3 class="subsection-header">// TECHNICAL SKILL SET INVENTORY</h3>
-                        <div class="skills-capabilities-matrix">
-                            <div class="skill-pill"><i class="fas fa-bezier-curve"></i> Vector Scaling Architecture</div>
-                            <div class="skill-pill"><i class="fas fa-shirt"></i> Sublimation Template Mapping</div>
-                            <div class="skill-pill"><i class="fas fa-palette"></i> Streetwear Brand Identity</div>
-                            <div class="skill-pill"><i class="fas fa-object-group"></i> Advanced Media Layout Composition</div>
-                            <div class="skill-pill"><i class="fas fa-laptop-code"></i> Frontend Interface Prototyping</div>
-                            <div class="skill-pill"><i class="fas fa-film"></i> Dynamic Motion Post-Production</div>
-                        </div>
-
-                        <div class="stats-cards-grid">
-                            <div class="stat-card">
-                                <div class="stat-icon-wrap"><i class="fas fa-folder-open"></i></div>
-                                <div class="stat-meta">
-                                    <span class="stat-number">400+</span>
-                                    <span class="stat-label">Sublimation Layouts Created </span>
-                                </div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon-wrap"><i class="fas fa-user-check"></i></div>
-                                <div class="stat-meta">
-                                    <span class="stat-number">200+</span>
-                                    <span class="stat-label">Custom Jerseys & Apparel Completed</span>
-                                </div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon-wrap"><i class="fas fa-bolt"></i></div>
-                                <div class="stat-meta">
-                                    <span class="stat-number"> 99% </span>
-                                    <span class="stat-label">On-Time Execution</span>
-                                </div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon-wrap"><i class="fas fa-clock"></i></div>
-                                <div class="stat-meta">
-                                    <span class="stat-number">6+</span>
-                                    <span class="stat-label">Years Vector Experience</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="history-grid-wrapper">
-                    <div class="history-column">
-                        <h3 class="history-channel-title"><i class="fas fa-briefcase"></i> EXPERIENCE ARCHIVES</h3>
-                        <div class="timeline-track">
-                            <div class="timeline-node">
-                                <div class="node-bullet"></div>
-                                <span class="node-date">OCT 2024 - MAY 2026</span>
-                                <h4 class="node-designation">Senior Graphic Artist</h4>
-                                <p class="node-organization">CrisAngel Tailoring and Apparel</p>
-                                <p class="node-details">Oversee the end-to-end manufacturing pipeline for custom sportswear and streetwear lines, ensuring seamless transition from concept to production. Engineer high-precision, full-dye sublimation vector layouts and construct detailed structural garment mockups. Collaborate closely with production teams to enforce strict quality control, aesthetic alignment, and color consistency across all textile prints.</p>
-                            </div>
-                            <div class="timeline-node">
-                                <div class="node-bullet"></div>
-                                <span class="node-date">JUN 2022 - AUG 2024</span>
-                                <h4 class="node-designation">Graphic Designer</h4>
-                                <p class="node-organization">Syong Moto & Apparel</p>
-                                <p class="node-details">Designed comprehensive digital and print marketing materials for diverse brands, including social media campaigns and promotional posters for Don Macchiatos, alongside specialized UI assets and custom game launchers for the Cabal MMORPG community.</p>
-                            </div>
-                            <div class="timeline-node">
-                                <div class="node-bullet"></div>
-                                <span class="node-date">JUN 2022 - OCT 2023</span>
-                                <h4 class="node-designation">Freelance Graphic Designer</h4>
-                                <p class="node-organization">Don Macchiatos</p>
-                                <p class="node-details">Designed comprehensive digital and print marketing materials for diverse brands, including social media campaigns and promotional posters for Don Macchiatos, alongside specialized UI assets and custom game launchers for the Cabal MMORPG community.</p>
-                            </div>
-                            <div class="timeline-node">
-                                <div class="node-bullet"></div>
-                                <span class="node-date">MAR 2021 - APR 2022</span>
-                                <h4 class="node-designation">Graphic Artist</h4>
-                                <p class="node-organization">RKJ Clothing Co.</p>
-                                <p class="node-details">Developed cohesive visual identities for regional sports tournaments and produced precise vector graphics for motorcycle riding clubs, maintaining strict execution quality from digital concept to complex physical application.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="history-column">
-                        <h3 class="history-channel-title"><i class="fas fa-graduation-cap"></i> ACADEMIC PIPELINE</h3>
-                        <div class="timeline-track">
-                            <div class="timeline-node">
-                                <div class="node-bullet"></div>
-                                <span class="node-date">2021 - 2025</span>
-                                <h4 class="node-designation">BS In Information Technology</h4>
-                                <p class="node-organization">Major in Multimedia Systems</p>
-                                <p class="node-details">Advanced integration courses across human-interface layout standards, object-oriented database logic frameworks, and advanced visual design theories.</p>
-                            </div>
-                            <div class="timeline-node">
-                                <div class="node-bullet"></div>
-                                <span class="node-date">2019 - 2021</span>
-                                <h4 class="node-designation">Senior High School Graduate</h4>
-                                <p class="node-organization">TVL Track - Information & Communications Technology</p>
-                                <p class="node-details">Core functional learning modules for structural media systems development, vector mechanics, and baseline web coding patterns.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="view-panel">
-            <div class="panel-container project-workspace-100">
-                <div class="projects-layout-wrapper">
-                    <div class="projects-sidebar-nav">
-                        <span class="tag">STUDIO ARTIFACTS</span>
-                        <h2 class="panel-inner-title">Project<br><span class="accent-fill">Archives.</span></h2>
-                        <div class="category-tab-deck-vertical">
-                            <button class="tab-trigger active-tab" data-target-deck="social-media-deck"><i class="fas fa-photo-film"></i> SOCIAL MEDIA ADS</button>
-                            <button class="tab-trigger" data-target-deck="jersey-layout-deck"><i class="fa-solid fa-basketball"></i> BASKETBALL JERSEY </button>
-                            <button class="tab-trigger" data-target-deck="game-poster-deck"><i class="fa-solid fa-person-dress"></i> POLOSHIRT </button>
-                            <button class="tab-trigger" data-target-deck="branding-identity-deck"><i class="fa-solid fa-shirt"></i> T-SHIRT </button>
-                            <button class="tab-trigger" data-target-deck="jersey-shorts-deck"><i class="fas fa-briefcase"></i> MESH SHORTS </button>
-                        </div>
-                        <p class="click-instruction-tip"><i class="fas fa-expand-arrows-alt"></i> Click active center card to present in full zoom.</p>
-                    </div>
-
-                    <div class="projects-display-content">
-                        <div id="social-media-deck" class="slider-deck-container active-deck">
-                            <div class="depth-slider-viewport">
-                                <div class="depth-slider-track">
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/1.jpg" alt="Layout A"></div><div class="depth-card-meta"><h3>FRIYAY BLEND SLATE</h3><span>01 // ADVERTISEMENT LAYOUT</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/2.jpg" alt="Layout B"></div><div class="depth-card-meta"><h3>BUY 3 GET 1 SYSTEM</h3><span>02 // COMMERCIAL PROMOTION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/3.jpg" alt="Layout C"></div><div class="depth-card-meta"><h3>PROMOTION MATRIX</h3><span>03 // MEDIA CONVERSION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/4.jpg" alt="Layout D"></div><div class="depth-card-meta"><h3>SUMMER CAMPAIGN ART</h3><span>04 // MARKETING FLYER</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/5.jpg" alt="Layout E"></div><div class="depth-card-meta"><h3>MONDAY NASAD!</h3><span>05 // MEDIA CONVERSION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/6.jpg" alt="Layout F"></div><div class="depth-card-meta"><h3>SUMMER CAMPAIGN ART</h3><span>06 // MARKETING FLYER</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/7.jpg" alt="Layout G"></div><div class="depth-card-meta"><h3>GRAND OPENING</h3><span>07 // MARKETING FLYER</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/SOCIAL MEDIA/8.jpg" alt="Layout H"></div><div class="depth-card-meta"><h3>BONIFACIO DAY</h3><span>08 // MARKETING FLYER</span></div></div>
-                                </div>
-                            </div>
-                            <div class="slider-controls">
-                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
-                                <div class="slider-pagination"></div>
-                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-
-                        <div id="jersey-layout-deck" class="slider-deck-container">
-                            <div class="depth-slider-viewport">
-                                <div class="depth-slider-track">
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA.png" alt="Jersey A"></div><div class="depth-card-meta"><h3>IBA UPPER</h3><span>01 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA2.png" alt="Jersey B"></div><div class="depth-card-meta"><h3>IBA SHORT</h3><span>02 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/PANSAT 1.png" alt="Jersey C"></div><div class="depth-card-meta"><h3>PANSAT UPPER</h3><span>03 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/pansat 2.png" alt="Jersey D"></div><div class="depth-card-meta"><h3>PANSAT SHORT</h3><span>04 // FULL DYE SUBLIMATION</span></div></div>
-                                     <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/1.png" alt="Jersey A"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLUE UPPER</h3><span>05 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/2.png" alt="Jersey B"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLUE SHORT</h3><span>06 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/3.png" alt="Jersey C"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLACK UPPER</h3><span>07 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/4.png" alt="Jersey D"></div><div class="depth-card-meta"><h3>MAIZURU BISHAMON - BLACK SHORT</h3><span>08 // FULL DYE SUBLIMATION</span></div></div>
-                                </div>
-                            </div>
-                            <div class="slider-controls">
-                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
-                                <div class="slider-pagination"></div>
-                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-
-                        <div id="game-poster-deck" class="slider-deck-container">
-                            <div class="depth-slider-viewport">
-                                <div class="depth-slider-track">
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/POLOSHIRT/1.png" alt="Game Poster A"></div><div class="depth-card-meta"><h3>BRIGADA ESKWELA</h3><span>01 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/POLOSHIRT/2.png" alt="Game Poster B"></div><div class="depth-card-meta"><h3>CHESS CLUB</h3><span>02 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/POLOSHIRT/3.png" alt="Game Poster C"></div><div class="depth-card-meta"><h3>PMWI PHILIPPINES</h3><span>03 // FULL DYE SUBLIMATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/POLOSHIRT/4.png" alt="Game Poster D"></div><div class="depth-card-meta"><h3>JUDICIARY</h3><span>04 // FULL DYE SUBLIMATION</span></div></div>
-                                </div>
-                            </div>
-                            <div class="slider-controls">
-                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
-                                <div class="slider-pagination"></div>
-                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-
-                        <div id="branding-identity-deck" class="slider-deck-container">
-                            <div class="depth-slider-viewport">
-                                <div class="depth-slider-track">
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/vector-logo.jpg" alt="Branding A"></div><div class="depth-card-meta"><h3>NEON CYBERNETIC EMBLEM</h3><span>01 // VECTOR ICON BLUEPRINT</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/streetwear-mock.jpg" alt="Branding B"></div><div class="depth-card-meta"><h3>STREETWEAR TYPE BRANDING</h3><span>02 // APPAREL REVOLUTION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/decal-map.jpg" alt="Branding C"></div><div class="depth-card-meta"><h3>MOTOR SPORT CONTOUR DECAL</h3><span>03 // PACK GEOMETRY</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/BRANDING/typography.jpg" alt="Branding D"></div><div class="depth-card-meta"><h3>BRUTALIST TEXT MECHANICS</h3><span>04 // LOGOTYPE SYSTEM</span></div></div>
-                                </div>
-                            </div>
-                            <div class="slider-controls">
-                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
-                                <div class="slider-pagination"></div>
-                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                        
-                        <div id="jersey-shorts-deck" class="slider-deck-container">
-                            <div class="depth-slider-viewport">
-                                <div class="depth-slider-track">
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA.png" alt="Jersey A"></div><div class="depth-card-meta"><h3>IBA SPORTSWEAR PRIMAL</h3><span>01 // SUBLIMATION BLUEPRINT</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/IBA2.png" alt="Jersey B"></div><div class="depth-card-meta"><h3>TEAM SUITE STRUCT MATRIX</h3><span>02 // VECTOR RENDER</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/PANSAT 1.png" alt="Jersey C"></div><div class="depth-card-meta"><h3>PANSAT IDENTITY CORE</h3><span>03 // FULL DYE FABRICATION</span></div></div>
-                                    <div class="depth-card"><div class="card-image-wrap"><img src="images/JERSEY LAYOUT/pansat 2.png" alt="Jersey D"></div><div class="depth-card-meta"><h3>PANSAT DEPLOYMENT B</h3><span>04 // SPORT BLUEPRINT</span></div></div>
-                                </div>
-                            </div>
-                            <div class="slider-controls">
-                                <button class="ctrl-btn prev-btn" aria-label="Previous"><i class="fas fa-arrow-left"></i></button>
-                                <div class="slider-pagination"></div>
-                                <button class="ctrl-btn next-btn" aria-label="Next"><i class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="view-panel">
-            <div class="panel-container">
-                <span class="tag">DIRECT INTAKE PORT</span>
-                <h2 class="panel-inner-title">Initialize A Visual <span class="accent-fill">Project Grid.</span></h2>
-                <div class="contact-split-layout">
-                    <div class="contact-editorial-sidebar">
-                        <p class="sidebar-description-text">Ready to launch clean high-precision manufacturing files, clothing matrices, or complete visual identities. Let's engineer assets with intent.</p>
-                        <div class="data-block-node">
-                            <span class="node-label">DIRECT STUDIO COMMS</span>
-                            <span class="node-value">krdesigns023@gmail.com</span>
-                        </div>
-                        <div class="data-block-node">
-                            <span class="node-label">GEOGRAPHIC LOCATION BASELINE</span>
-                            <span class="node-value">Cebu, Philippines</span>
-                        </div>
-                        
-                        <div class="contact-social-grid">
-                            <span class="node-label">SECURE MATRIX NETWORKS</span>
-                            <div class="contact-social-links">
-                                <a href="https://www.facebook.com/Walakiiin" target="_blank" class="contact-icon-node" title="Facebook Connect"><i class="fab fa-facebook"></i></a>
-                                <a href="https://www.instagram.com/rjey_villarin/" class="contact-icon-node" title="Instagram Creative"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="contact-icon-node" title="Behance Network Portfolio"><i class="fab fa-behance"></i></a>
-                                <a href="#" class="contact-icon-node" title="LinkedIn Business Directory"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://m.me/Walakiiin" class="contact-icon-node" title="Messenger Link Direct"><i class="fab fa-facebook-messenger"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <form id="contact-form" class="studio-minimal-form">
-                        <div class="form-input-wrapper">
-                            <input type="text" placeholder="Identity / Business Organization Name" required>
-                        </div>
-                        <div class="form-input-wrapper">
-                            <input type="email" placeholder="Your Active Email Channel" required>
-                        </div>
-                        <div class="form-input-wrapper">
-                            <textarea placeholder="Outline Project Service Scope & Objectives..." rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary form-submit-trigger">Launch Digital Brief Matrix →</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <div class="presentation-zoom-portal" id="zoomPortal" aria-hidden="true">
-        <button class="portal-close-trigger" aria-label="Close Presentation"><i class="fas fa-times"></i></button>
-        <div class="portal-content-wrap">
-            <img src="" alt="Enlarged Project Frame" id="portalTargetImage">
-            <div class="portal-meta-display">
-                <h2 id="portalHeading">PROJECT TITLE</h2>
-                <p id="portalSub">META INFORMATION</p>
-            </div>
-        </div>
+    <div class="theme-tools" aria-label="Appearance controls">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Toggle dark/light mode">
+        <span class="theme-icon">☾</span><span class="theme-label">DARK</span>
+      </button>
+      <div class="accent-picker" aria-label="Highlight color">
+        <button class="accent-dot active" data-accent="lime" aria-label="Lime highlight" title="Lime"></button>
+        <button class="accent-dot" data-accent="cyan" aria-label="Cyan highlight" title="Cyan"></button>
+        <button class="accent-dot" data-accent="violet" aria-label="Violet highlight" title="Violet"></button>
+        <button class="accent-dot" data-accent="orange" aria-label="Orange highlight" title="Orange"></button>
+        <button class="accent-dot" data-accent="pink" aria-label="Pink highlight" title="Pink"></button>
+      </div>
     </div>
+    <a class="nav-cta" href="#contact">Start a Project ↗</a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#about">About &amp; Experience</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-    <footer>
-        <div class="footer-dashboard-row">
-            <span class="footer-brand">RJV<span class="dot">.</span></span>
-            <span class="footer-credo-text">STRUCTURED VISUALS. FABRICATED WITH PURPOSE.</span>
-            <span class="footer-live-node"><span class="pulse-indicator"></span> LIGHTNING CORE ACTIVE</span>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> GRAPHIC DESIGNER · UI / WEB DESIGNER · FRONTEND</p>
+        <h1>Visuals with<br><em>motion.</em> Interfaces that work.</h1>
+        <p class="lead">I’m Ralph Joaquin Villarin — a multidisciplinary creative specializing in <strong>Graphic Design, Web Design and Web Development</strong>. I turn ideas into polished visual identities, production-ready artwork and responsive digital experiences.</p>
+        <div class="hero-actions">
+          <a class="button primary magnetic" href="#work">Explore My Work <span>↗</span></a>
+          <a class="button ghost magnetic" href="#contact">Let’s Collaborate <span>↗</span></a>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+      </div>
+      <div class="hero-card reveal">
+        <div class="orb"></div>
+        <div class="portrait-frame">
+          <img id="profileImage" class="profile-image" src="assets/profile.png" alt="Ralph Designs profile image">
+        </div>
+        <a class="button primary magnetic resume-download" href="assets/RESUMEE.pdf" download="RJ-Portfolio-Resume.pdf" aria-label="Download RJ Portfolio resume">
+          Download Resume <span>↓</span>
+        </a>
+        <div class="floating-card fc-one">VECTOR<br><b>CRAFT</b></div>
+        <div class="floating-card fc-two">WEB<br><b>BUILD</b></div>
+      </div>
+    </section>
+
+    <section class="positioning" aria-label="Professional disciplines">
+      <div><span>01</span><strong>GRAPHIC DESIGNER</strong><small>Branding · Apparel · Digital</small></div>
+      <div><span>02</span><strong>WEB DESIGNER</strong><small>UI/UX · Responsive Systems</small></div>
+      <div><span>03</span><strong>WEB DEVELOPER</strong><small>HTML · CSS · JavaScript</small></div>
+    </section>
+
+    <section class="ticker" aria-label="Skills and tools">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>PHOTOSHOP</span><i>✦</i><span>ILLUSTRATOR</span><i>✦</i><span>FIGMA</span><i>✦</i><span>HTML5 / CSS3</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>COREL DRAW</span><i>✦</i><span>AFTER EFFECTS</span><i>✦</i><span>CANVA</span><i>✦</i>
+        </div>
+        <div class="ticker-group">
+          <span>PHOTOSHOP</span><i>✦</i><span>ILLUSTRATOR</span><i>✦</i><span>FIGMA</span><i>✦</i><span>HTML5 / CSS3</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>COREL DRAW</span><i>✦</i><span>AFTER EFFECTS</span><i>✦</i><span>CANVA</span><i>✦</i>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span>PHOTOSHOP</span><i>✦</i><span>ILLUSTRATOR</span><i>✦</i><span>FIGMA</span><i>✦</i><span>HTML5 / CSS3</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i><span>COREL DRAW</span><i>✦</i><span>AFTER EFFECTS</span><i>✦</i><span>CANVA</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skill-stats">
+      <div class="section-label">02 / SKILL SET</div>
+      <div class="skill-intro"><h2>Creative <span>range.</span><br>Technical <span>depth.</span></h2><p>Design and development skills combined into one production-ready workflow.</p></div>
+      <div class="skill-grid">
+        <article class="skill-card"><div class="skill-top"><span>GRAPHIC DESIGN</span><strong>95%</strong></div><div class="meter"><i style="--level:95%"></i></div><p>Branding · Vector Art · Apparel · Digital Campaigns</p></article>
+        <article class="skill-card"><div class="skill-top"><span>WEB DESIGN</span><strong>90%</strong></div><div class="meter"><i style="--level:90%"></i></div><p>UI/UX · Figma · Responsive Layout · Visual Systems</p></article>
+        <article class="skill-card"><div class="skill-top"><span>FRONTEND DEVELOPMENT</span><strong>85%</strong></div><div class="meter"><i style="--level:85%"></i></div><p>HTML · CSS · JavaScript · Interactive Components</p></article>
+        <article class="skill-card"><div class="skill-top"><span>APPAREL / SUBLIMATION</span><strong>98%</strong></div><div class="meter"><i style="--level:98%"></i></div><p>Sportswear · Full Dye · Mockups · Print Production</p></article>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card"><strong data-count="6">0</strong><span>+ YEARS EXPERIENCE</span></div>
+        <div class="stat-card"><strong data-count="400">0</strong><span>+ SUBLIMATION LAYOUTS</span></div>
+        <div class="stat-card"><strong data-count="200">0</strong><span>+ APPAREL PROJECTS</span></div>
+        <div class="stat-card"><strong data-count="100">0</strong><span>% PRODUCTION FOCUS</span></div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-label">03 / ABOUT &amp; EXPERIENCE</div>
+      <div class="two-col about-main">
+        <div>
+          <h2>From pixels to<br><span>production.</span></h2>
+        </div>
+        <div class="about-copy">
+          <p class="large"><strong>Bridging visual design with real-world production.</strong></p>
+          <p>I’m a multidisciplinary <strong>Graphic Designer and creative developer with 6+ years of hands-on experience</strong>, turning ideas into polished, production-ready visual systems. My work connects branding, apparel, sportswear, full-dye sublimation, marketing graphics and digital interfaces — combining strong visual direction with the technical discipline required to make every design work beyond the screen.</p>
+          <p>My approach bridges visual creativity and real-world production. I create precise vector artwork, multi-panel garment layouts, sportswear graphics, mockups, campaign assets and responsive interfaces with careful control of typography, composition, color, file structure and print requirements. I design with the final output in mind, so the work is not only visually strong but also practical, scalable and ready to manufacture or publish.</p>
+          <p>I work across the complete creative pipeline — from concept development and art direction to vector construction, layout refinement, mockup presentation, production artwork, print preparation and digital implementation. My goal is to reduce the gap between concept and final output through <strong>clear ideas, organized files, accurate artwork and consistent execution.</strong></p>
+          <p>Over the years, I’ve developed my process in fast-moving creative and production environments where deadlines, revisions, brand consistency and manufacturing requirements are part of the job. My experience covers sportswear and full-dye sublimation, apparel graphics, brand identity, promotional campaigns, automotive-inspired graphics, social content and web interfaces. I think beyond a single artwork — I build visual systems that remain consistent from the first concept through final production.</p>
+
+        </div>
+      </div>
+
+      <div class="about-tech">
+        <div class="about-subhead">TECHNICAL SKILLS — GRAPHIC DESIGN</div>
+        <div class="technical-skill-list">
+          <span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>CorelDRAW</span><span>Figma</span><span>Canva</span><span>After Effects</span><span>Vector Construction</span><span>Typography</span><span>Brand Identity</span><span>Sportswear Design</span><span>Full-Dye Sublimation</span><span>Print Production</span><span>Mockup Design</span><span>Color Management</span><span>Photo Editing</span><span>Digital Campaigns</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span>
+        </div>
+      </div>
+
+      <div class="about-career-grid">
+        <div class="career-column" id="experience">
+          <div class="about-subhead">EXPERIENCE</div>
+          <div class="career-list">
+            <article><span>SEP 2026 — PRESENT</span><h3>Lead Graphic Designer</h3><b>UniPrint — Printing Services</b><p>Leads sublimation design and production workflows, develops full-dye layouts and garment mockups, and maintains visual quality, color accuracy and production consistency.</p></article>
+            <article><span>OCT 2024 — MAY 2026</span><h3>Senior Graphic Designer</h3><b>CrisAngel Tailoring and Apparel</b><p>Managed apparel design workflows, full-dye sublimation layouts and garment mockups while maintaining production-ready artwork and customer-focused revisions.</p></article>
+            <article><span>JUN 2022 — AUG 2024</span><h3>Graphic Designer</h3><b>Syong Moto &amp; Apparel</b><p>Created digital and print marketing assets, social campaigns, promotional graphics, UI assets and specialized visuals for apparel and community projects.</p></article>
+            <article><span>JUN 2022 — OCT 2023</span><h3>Freelance Graphic Designer</h3><b>Don Macchiatos</b><p>Produced brand-focused digital and print materials, promotional content and campaign graphics for a growing food and beverage brand.</p></article>
+            <article><span>MAR 2021 — APR 2022</span><h3>Graphic Designer</h3><b>RKJ Clothing Co.</b><p>Developed sports-event identities and precise vector artwork for motorcycle, apparel and promotional applications.</p></article>
+          </div>
+        </div>
+
+        <div class="career-column education-column">
+          <div class="about-subhead">EDUCATION</div>
+          <div class="education-list">
+            <article><span>2021 — 2025</span><h3>BS in Information Technology</h3><b>Major in Multimedia Systems</b><p>Built a foundation in information technology, multimedia, digital systems, interface design and technology-driven creative workflows.</p></article>
+            <article><span>2019 — 2021</span><h3>Senior High School</h3><b>TVL Track — Information &amp; Communications Technology</b><p>Developed early technical skills in computing, digital tools and information technology that supported my transition into professional creative work.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-label">04 / SERVICES</div>
+      <div class="service-grid">
+        <article><b>01</b><h3>Apparel & Sublimation</h3><p>Full-dye jersey systems, multi-panel layouts, shorts, polos, tees and production-ready garment graphics.</p></article>
+        <article><b>02</b><h3>Brand Identity</h3><p>Logos, typography systems, visual identities, streetwear marks and brand assets designed for consistency.</p></article>
+        <article><b>03</b><h3>Digital & Social</h3><p>Campaign graphics, advertisements, promotional posters, launch creatives and digital marketing materials.</p></article>
+        <article><b>04</b><h3>Web Design & Frontend</h3><p>Responsive portfolio sites, landing pages and modern interfaces using HTML, CSS, JavaScript and Figma workflows.</p></article>
+      </div>
+    </section>
+
+    <section id="work" class="section work">
+      <div class="work-heading">
+        <div class="section-label">05 / SELECTED WORK</div>
+        <h2>Selected <span>projects.</span></h2>
+        <p>A curated mix of graphic design, apparel artwork, brand identity, UI design and frontend development.</p>
+      </div>
+      <div class="project-filters" role="tablist" aria-label="Filter portfolio pictures">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ALL PROJECTS</button>
+        <button class="filter-btn" data-filter="rkj" role="tab" aria-selected="false">RKJ APPAREL</button>
+        <button class="filter-btn" data-filter="act" role="tab" aria-selected="false">ACT</button>
+        <button class="filter-btn" data-filter="3r" role="tab" aria-selected="false">3R SPORTSWEAR</button>
+        <button class="filter-btn" data-filter="don" role="tab" aria-selected="false">DON MACCHIATOS</button>
+        <button class="filter-btn" data-filter="game" role="tab" aria-selected="false">GAME POSTERS</button>
+      </div>
+      <div class="portfolio-picture-grid" id="portfolioPictureGrid">
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — campaign poster">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">01</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-01.jpg" alt="Don Macchiatos — campaign poster" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — product campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">02</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-02.jpg" alt="Don Macchiatos — product campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — social creative">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">03</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-03.jpg" alt="Don Macchiatos — social creative" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — anniversary promotion">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">04</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-04.jpg" alt="Don Macchiatos — anniversary promotion" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — weekly social post">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">05</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-05.jpg" alt="Don Macchiatos — weekly social post" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — grand opening campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">06</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-06.jpg" alt="Don Macchiatos — grand opening campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — coffee campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">07</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-07.jpg" alt="Don Macchiatos — coffee campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="don" data-project="don" data-title="DON MACCHIATOS" data-category-label="GRAPHIC / PORTFOLIO" data-description="Don Macchiatos — Bonifacio Day creative">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">08</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/don-08.jpg" alt="Don Macchiatos — Bonifacio Day creative" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>DON MACCHIATOS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="3r" data-project="3r" data-title="3R SPORTSWEAR" data-category-label="3R / PORTFOLIO" data-description="3R Sportswear — Maizuru basketball jersey">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">09</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-01.png" alt="3R Sportswear — Maizuru basketball jersey" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>3R SPORTSWEAR</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="3r" data-project="3r" data-title="3R SPORTSWEAR" data-category-label="3R / PORTFOLIO" data-description="3R Sportswear — Maizuru basketball shorts">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">10</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-02.png" alt="3R Sportswear — Maizuru basketball shorts" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>3R SPORTSWEAR</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="3r" data-project="3r" data-title="3R SPORTSWEAR" data-category-label="3R / PORTFOLIO" data-description="3R Sportswear — EXECOM sportswear polo">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">11</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-03.png" alt="3R Sportswear — EXECOM sportswear polo" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>3R SPORTSWEAR</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="3r" data-project="3r" data-title="3R SPORTSWEAR" data-category-label="3R / PORTFOLIO" data-description="3R Sportswear — Brigadea Eskwela apparel">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">12</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/3r-01.png" alt="3R Sportswear — Brigadea Eskwela apparel" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>3R SPORTSWEAR</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="3r" data-project="3r" data-title="3R SPORTSWEAR" data-category-label="3R / PORTFOLIO" data-description="3R Sportswear — performance jersey design">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">13</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/3r-02.png" alt="3R Sportswear — performance jersey design" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>3R SPORTSWEAR</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="3r" data-project="3r" data-title="3R SPORTSWEAR" data-category-label="3R / PORTFOLIO" data-description="3R Sportswear — custom sportswear campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">14</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/3r-03.png" alt="3R Sportswear — custom sportswear campaign" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>3R SPORTSWEAR</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — All Saints Day advisory">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">15</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-04.jpg" alt="RKJ Apparel — All Saints Day advisory" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — cycling apparel campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">16</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-05.jpg" alt="RKJ Apparel — cycling apparel campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — coffee shop polo campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">17</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-06.jpg" alt="RKJ Apparel — coffee shop polo campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — custom shirt campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">18</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-07.jpg" alt="RKJ Apparel — custom shirt campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — polo apparel campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">19</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-08.jpg" alt="RKJ Apparel — polo apparel campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — red black shirt campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">20</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-09.jpg" alt="RKJ Apparel — red black shirt campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — polo shirt campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">21</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-10.jpg" alt="RKJ Apparel — polo shirt campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="rkj" data-project="rkj" data-title="RKJ APPAREL" data-category-label="RKJ / PORTFOLIO" data-description="RKJ Apparel — sublimation apparel promotion">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">22</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/rkj-11.jpg" alt="RKJ Apparel — sublimation apparel promotion" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>RKJ APPAREL</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="act" data-project="act" data-title="ACT" data-category-label="ACT / PORTFOLIO" data-description="ACT — basketball game results">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">23</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/act-01.jpg" alt="ACT — basketball game results" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>ACT</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="act" data-project="act" data-title="ACT" data-category-label="ACT / PORTFOLIO" data-description="ACT — basketball game results">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">24</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/act-02.jpg" alt="ACT — basketball game results" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>ACT</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="act" data-project="act" data-title="ACT" data-category-label="ACT / PORTFOLIO" data-description="ACT — Asianista Games campaign">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">25</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/act-03.jpg" alt="ACT — Asianista Games campaign" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>ACT</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="act" data-project="act" data-title="ACT" data-category-label="ACT / PORTFOLIO" data-description="ACT — women’s volleyball result">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">26</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/act-04.jpg" alt="ACT — women’s volleyball result" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>ACT</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="act" data-project="act" data-title="ACT" data-category-label="ACT / PORTFOLIO" data-description="ACT — event coordinator poster">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">27</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/act-05.jpg" alt="ACT — event coordinator poster" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>ACT</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="act" data-project="act" data-title="ACT" data-category-label="ACT / PORTFOLIO" data-description="ACT Cyberknights — basketball victory poster">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">28</span>
+            <span class="picture-open">VIEW ↗</span>
+            <img src="assets/act-victory.jpg" alt="ACT Cyberknights — basketball victory poster" loading="lazy" decoding="async">
+          </div>
+          <div class="portfolio-picture-meta"><span>ACT</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="game" data-project="game" data-title="CABAL MAXIMUM" data-category-label="GAME POSTER / PORTFOLIO" data-description="Cabal Maximum — Open Beta promotional poster">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">29</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/game-01.jpg" alt="Cabal Maximum — Open Beta promotional poster" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>GAME POSTERS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="game" data-project="game" data-title="CABAL MAXIMUM" data-category-label="GAME POSTER / PORTFOLIO" data-description="Cabal Maximum — Server is Now Up promotional poster">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">30</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/game-02.jpg" alt="Cabal Maximum — Server is Now Up promotional poster" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>GAME POSTERS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="game" data-project="game" data-title="CABAL MAXIMUM" data-category-label="GAME POSTER / PORTFOLIO" data-description="Cabal Maximum — Like & Share promotional poster">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">31</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/game-03.jpg" alt="Cabal Maximum — Like and Share promotional poster" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>GAME POSTERS</span><b>VIEW</b></div>
+        </article>
+        <article class="portfolio-picture project" tabindex="0" data-category="game" data-project="game" data-title="CABAL MAXIMUM" data-category-label="GAME POSTER / PORTFOLIO" data-description="Cabal Maximum — Streamer recruitment promotional poster">
+          <div class="portfolio-picture-frame">
+            <span class="picture-number">32</span><span class="picture-open">VIEW ↗</span>
+            <img src="assets/game-04.jpg" alt="Cabal Maximum — streamer recruitment promotional poster" loading="lazy" decoding="async">
+          </div><div class="portfolio-picture-meta"><span>GAME POSTERS</span><b>VIEW</b></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="section-label">06 / UI + WEB PROCESS</div>
+      <div class="process-head">
+        <h2>From <span>idea</span> to interaction.</h2>
+        <p>I combine visual design, responsive layout and frontend motion into interfaces that feel intentional on every screen.</p>
+      </div>
+      <div class="process-grid">
+        <article><span>01</span><h3>Discover</h3><p>Clarify goals, audience, content and visual direction before building.</p></article>
+        <article><span>02</span><h3>Design</h3><p>Create hierarchy, components, responsive states and a consistent visual system.</p></article>
+        <article><span>03</span><h3>Animate</h3><p>Add purposeful hover, reveal, scroll and micro-interactions without overloading the page.</p></article>
+        <article><span>04</span><h3>Build</h3><p>Translate the design into clean HTML, CSS and JavaScript with responsive behavior.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-inner">
+        <p class="eyebrow">09 / DIRECT STUDIO COMMS</p>
+        <h2>Have a project?<br><em>Let’s build it.</em></h2>
+        <p>Available for apparel design, branding, digital campaigns, web design and freelance creative projects.</p>
+        <a class="email" href="mailto:krdesigns023@gmail.com">krdesigns023@gmail.com ↗</a>
+        <div class="contact-meta"><span>Cebu, Philippines</span><span>OPEN FOR COMMISSIONS</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" aria-label="Close project preview" data-modal-close>×</button>
+      <div class="modal-media">
+        <div class="modal-counter"><span id="modalCurrent">01</span> / <span id="modalTotal">01</span></div>
+        <img id="modalImage" src="" alt="">
+        <button class="gallery-nav gallery-prev" type="button" aria-label="Previous project image">←</button>
+        <button class="gallery-nav gallery-next" type="button" aria-label="Next project image">→</button>
+      </div>
+      <div class="modal-copy">
+        <p id="modalCategory" class="section-label"></p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-tags" id="modalTags"></div>
+        <div class="modal-thumbs" id="modalThumbs" aria-label="Project images"></div>
+      </div>
+    </div>
+  </div>
+  <button class="back-top" type="button" aria-label="Back to top">↑</button>
+
+  <footer>
+    <span>© 2026 RJ PORTFOLIO</span>
+    <span>STRUCTURED VISUALS. BUILT WITH PURPOSE.</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
